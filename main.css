@@ -6,13 +6,13 @@ body{
     width:70%;
     max-width:1000px;
     height: 70px;
-    background-color:#000000;
+    background:#F0EFEF;
     margin:0 auto;
     color:#FFFFFF;
 }
 
 #bannerZone{
-    background-color:#898989;
+    background:#F0EFEF;
     color:#FFFFFF;
     width:100%;
     height:125px;
@@ -51,11 +51,11 @@ body{
 }
 
 .navLink:hover{
-    background-color:#BF0303;
+    background-color:#F0EFEF;
 }
 
 #bodyWrapper{
-    background-color:gray;
+    background-color:#F0EFEF;
     width:70%;
     max-width:800px;
     height:1275px;
@@ -64,9 +64,115 @@ body{
 }
 
 #bodyZone{
-    background-color: darkgrey;
+    background-color:#F0EFEF;
     width:100%;
     max-width:800px;
     height:1255px;
     margin:0 auto;
 }
+
+#upperMessage{
+background-color:#F0EFEF;
+height:70px;
+}
+
+.left{
+    width:50%;
+    float:left;
+    background:#F0EFEF;
+    height:100%;    
+}
+
+.right{
+    width:50%;
+    float:right;
+    background:#F0EFEF;
+    height:100%;
+    
+}
+
+.middleTop{
+    height:320px;
+    background:#F0EFEF;
+        
+}
+
+#sliderDiv{
+    height:100%;
+    width:60%;
+    background:#F0EFEF;
+    float:left;
+     
+}
+
+#midTopMsg.right{
+    float:right;
+    width:40%;
+    height:50%;
+    background:#F0EFEF;
+}
+
+#midBtmMsg.right{
+    float:right;
+    width:40%;
+    height:50%;
+    background:#F0EFEF;
+}
+
+.middleBtm{
+    height:300px;
+    width:100%;
+    background:#F0EFEF;
+}
+
+.leftThird{
+    height:100%;
+    width:33.3%;
+    float:left;
+    background:#F0EFEF;
+      
+}
+
+.midThird{
+    height:100%;
+    float:left;
+    width:33.3%;
+    background:#F0EFEF;
+}
+
+.rightThird{
+    height:100%;
+    float:right;
+    width:33.3%;
+    background:#F0EFEF;
+}
+
+#sliderBtm{
+    height:280px;
+    width:100%;
+    background:#F0EFEF;
+}
+
+.bottom{
+    height:270px;
+    width:100%;
+}
+
+#footer{
+    width:100%;
+    height:270px;
+    background:#F0EFEF;
+}
+
+.InnerTop{
+    width:100%;
+    height:50%;
+    background:#F0EFEF;
+}
+
+.InnerBottom{
+    width:100%;
+    height:50%;
+    background:#F0EFEF;
+}
+

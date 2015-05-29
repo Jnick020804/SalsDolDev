@@ -11,11 +11,9 @@ $disp = new Display();
     </head>
     <body>
         <div id='topAdZone'>
-            Top AD ZONE
         </div>
         <div id='headerZone'>
             <div id='bannerZone'>
-                BANNER ZONE
             </div>
             <div id='navZone'>
                 <?php echo $disp->displayNav(array('Household','Pantry','Party Supplies','Health & Beauty','Office & School','Toys & Crats','Seasonal & Holidays','Apparel'));?>
@@ -23,36 +21,37 @@ $disp = new Display();
             
         </div>
         <div id='bodyWrapper'>
-            Body Wrapper
+            
             <div id='bodyZone'>
-                Body Zone
+                
                 <div class='top'>
-                    TOP OF BODY
+                    
                     <div id='upperMessage'>
+                        
                         <div id='topLeftMsg' class='left'>
-
                         </div>
                         <div id='topRightMsg' class='right'>
-
                         </div>
                     </div>
-                    <div class='middleTop'>
+                </div>
+                <div class='middleTop'>
+                        
                         <div id='sliderDiv'>
                             
                         </div>
-                        <div id='midTopMsg' class='right top'>
+                        <div id='midTopMsg' class='right'>
                             
                         </div>
-                        <div id='midBtmMsg' class='right bottom'>
+                        <div id='midBtmMsg' class='right'>
                             
                         </div>
-                    </div>
-                    <div class='middleBtm'>
+                </div>
+                <div class='middleBtm'>
                         <div class='leftThird'>
-                            <div class='top'>
+                            <div class='InnerTop'>
                                 
                             </div>
-                            <div class='bottom'>
+                            <div class='InnerBottom'>
                                 
                             </div>
                         </div>
@@ -62,8 +61,18 @@ $disp = new Display();
                         <div class='rightThird'>
                             
                         </div>
+                </div>
+                <div id="sliderBtm">
+                        
+                </div>
+                <div class='bottom'>
+                    <div class="leftThird">
+                        
                     </div>
-                    <div class='bottom'>
+                    <div class="midThird">
+                        
+                    </div>
+                    <div class="leftThird">
                         
                     </div>
                 </div>
