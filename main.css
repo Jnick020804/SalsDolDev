@@ -51,7 +51,7 @@ body{
 }
 
 .navLink:hover{
-    background-color:#F0EFEF;
+    background-color:#BA021B;
 }
 
 #bodyWrapper{
@@ -68,6 +68,14 @@ body{
     width:100%;
     max-width:800px;
     height:1255px;
+    margin:0 auto;
+}
+
+#loginBodyZone{
+    background-color:#F0EFEF;
+    width:100%;
+    max-width:800px;
+    height:auto;
     margin:0 auto;
 }
 
