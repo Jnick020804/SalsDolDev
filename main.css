@@ -1,5 +1,5 @@
 body{
-    background-color:#F0EFEF;
+    background-color:lightgrey;
 }
 
 #topAdZone{
@@ -79,35 +79,31 @@ body{
 }
 
 #upperMessage{
-background-color:#F0EFEF;
 height:70px;
+margin-top:5px;
 }
 
 .left{
-    width:49.5%;
+    width:49.7%;
     float:left;
-    background:#F0EFEF;
     height:100%;    
 }
 
 .right{
-    width:49.5%;
+    width:50%;
     float:right;
-    background:#F0EFEF;
     height:100%;
     
 }
 
 .middleTop{
     height:320px;
-    background:#F0EFEF;
         
 }
 
 #sliderDiv{
     height:100%;
     width:60%;
-    background:#F0EFEF;
     float:left;
      
 }
@@ -115,49 +111,50 @@ height:70px;
 #midTopMsg.right{
     float:right;
     width:40%;
-    height:50%;
-    background:#F0EFEF;
+    height:49.7%;
+    border-bottom:2px groove lightgrey;
 }
 
 #midBtmMsg.right{
     float:right;
     width:40%;
     height:50%;
-    background:#F0EFEF;
 }
 
 .middleBtm{
     height:300px;
     width:100%;
-    background:#F0EFEF;
 }
 
 .leftThird{
     height:100%;
     width:33.3%;
     float:left;
-    background:#F0EFEF;
       
+}
+
+.midleftThird{
+    height:100%;
+    width:33%;
+    float:left;
+    border-right: 2px groove lightgrey;
 }
 
 .midThird{
     height:100%;
     float:left;
-    width:33.3%;
-    background:#F0EFEF;
+    width:33.3%;;
 }
 
 .rightThird{
     height:100%;
     float:right;
     width:33.3%;
-    background:#F0EFEF;
 }
 
 #sliderBtm{
     height:280px;
     width:100%;
-    background:#F0EFEF;
 }
 
 .bottom{
@@ -168,19 +165,17 @@ height:70px;
 #footer{
     width:100%;
     height:270px;
-    background:#F0EFEF;
 }
 
 .InnerTop{
     width:100%;
-    height:50%;
-    background:#F0EFEF;
+    height:49.7%;
+    border-bottom:2px groove lightgrey;
 }
 
 .InnerBottom{
     width:100%;
     height:50%;
-    background:#F0EFEF;
 }
 
 .imgWrapper{
@@ -205,8 +200,16 @@ height:70px;
 }
 
 #topLeftMsg,#topRightMsg{
-    background-color:#ffffff;
-    border: 1px solid darkgrey;
+
     height:100%;
 
+}
+
+#topLeftMsg{
+    border-right:2px lightgrey;
+    border-right-style: groove;
+}
+
+#topRightMsg{
+   
 }

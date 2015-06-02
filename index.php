@@ -38,6 +38,7 @@ $disp = new Display();
                             <?php echo $disp->fillContentMessageZones('topLeftMsg'); ?>
                         </div>
                         <div id='topRightMsg' class='right'>
+                            <?php echo $disp->fillContentMessageZones('topRightMsg'); ?>
                         </div>
                     </div>
                 </div>
@@ -47,26 +48,27 @@ $disp = new Display();
                             
                         </div>
                         <div id='midTopMsg' class='right'>
+                            <?php echo $disp->fillContentAdZones('midTopMsg'); ?>
                             
                         </div>
                         <div id='midBtmMsg' class='right'>
-                            
+                             <?php echo $disp->fillContentAdZones('midBtmMsg'); ?>
                         </div>
                 </div>
                 <div class='middleBtm'>
-                        <div class='leftThird'>
+                        <div class='midleftThird'>
                             <div class='InnerTop'>
-                                
+                                 <?php echo $disp->fillContentAdZones('InnerTopMsg'); ?>
                             </div>
                             <div class='InnerBottom'>
-                                
+                                 <?php echo $disp->fillContentAdZones('InnerBtmMsg'); ?>
                             </div>
                         </div>
                         <div class='midThird'>
                             
                         </div>
                         <div class='rightThird'>
-                            
+                             <?php echo $disp->fillContentAdZones('rightThirdMsg'); ?>
                         </div>
                 </div>
                 <div id="sliderBtm">
@@ -74,13 +76,13 @@ $disp = new Display();
                 </div>
                 <div class='bottom'>
                     <div class="leftThird">
-                        
+                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmLeftThirdMsg',$option); ?>
                     </div>
                     <div class="midThird">
-                        
+                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmMidThirdMsg',$option); ?>
                     </div>
-                    <div class="leftThird">
-                        
+                    <div class="rightThird">
+                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmRightThirdMsg',$option); ?>
                     </div>
                 </div>
             </div>
