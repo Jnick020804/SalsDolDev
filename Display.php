@@ -11,6 +11,8 @@
  *
  * @author SirJared
  */
+include 'Database.php';
+
 class Display {
     
     
@@ -26,5 +28,33 @@ class Display {
        $output.="</div>";
        
        return $output;
+   }
+   
+   public function fillContentMessageZones($zoneID)
+   {
+      $db = new Database('Sals_Dollar','localhost','root','root','mysql');
+      
+      $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID ="'.$zoneID.'";';
+      $result = $db->queryDb($sql);
+      
+      if($result->rowCount() > 1)
+      {
+          return 'ERROR TO MANY ROWS RETURNED';
+      }
+      else if($result->rowCount() <= 0)
+      {
+          return 'ERROR NO ROWS RETURNED';
+      }
+      
+      $row = $result->fetch();
+      
+      $output ='<div id="'.$zoneID.'" class="messageZone">';
+      $output.='<img class="messageImage" alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"/>';
+      $output.='<div class="messageLinkDiv">';
+      $output.='<a class="messageLink" href="'.$row['linkTarget'].'">'.$row['linkMessage'].'</a>';
+      $output.='</div>';
+      $output.='</div>';
+      
+      return $output;
    }
 }

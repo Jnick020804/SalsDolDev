@@ -11,9 +11,15 @@ $disp = new Display();
     </head>
     <body>
         <div id='topAdZone'>
+            <div class="imgWrapper">
+                <img alt="topAd" src=/>
+            </div>
         </div>
         <div id='headerZone'>
             <div id='bannerZone'>
+                <div class="imgWrapper">
+                    <img alt="banner" src="img/Sals_Dollar_Banner.jpg"/>
+                </div>
             </div>
             <div id='navZone'>
                 <?php echo $disp->displayNav(array('Household','Pantry','Party Supplies','Health & Beauty','Office & School','Toys & Crats','Seasonal & Holidays','Apparel'));?>
@@ -29,6 +35,7 @@ $disp = new Display();
                     <div id='upperMessage'>
                         
                         <div id='topLeftMsg' class='left'>
+                            <?php echo $disp->fillContentMessageZones('topLeftMsg'); ?>
                         </div>
                         <div id='topRightMsg' class='right'>
                         </div>
