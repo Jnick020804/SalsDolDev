@@ -45,7 +45,8 @@ $disp = new Display();
                 <div class='middleTop'>
                         
                         <div id='sliderDiv'>
-                            
+                            <iframe src="https://player.vimeo.com/video/46781473?autoplay=1&title=0&byline=0&portrait=0" width="470" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>                              
+                            </iframe>
                         </div>
                         <div id='midTopMsg' class='right'>
                             <?php echo $disp->fillContentAdZones('midTopMsg'); ?>
@@ -58,17 +59,17 @@ $disp = new Display();
                 <div class='middleBtm'>
                         <div class='midleftThird'>
                             <div class='InnerTop'>
-                                 <?php echo $disp->fillContentAdZones('InnerTopMsg'); ?>
+                                 <?php $options['style']=2; echo $disp->fillContentAdZones('innerTopMsg',$options); ?>
                             </div>
                             <div class='InnerBottom'>
-                                 <?php echo $disp->fillContentAdZones('InnerBtmMsg'); ?>
+                                 <?php $options['style']=2; echo $disp->fillContentAdZones('innerBtmMsg',$options); ?>
                             </div>
                         </div>
                         <div class='midThird'>
                             
                         </div>
                         <div class='rightThird'>
-                             <?php echo $disp->fillContentAdZones('rightThirdMsg'); ?>
+                             <?php $options['style']=1; echo $disp->fillContentAdZones('rightThirdMsg',$options); ?>
                         </div>
                 </div>
                 <div id="sliderBtm">
@@ -76,13 +77,13 @@ $disp = new Display();
                 </div>
                 <div class='bottom'>
                     <div class="leftThird">
-                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmLeftThirdMsg',$option); ?>
+                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmLeftThirdMsg',$option); ?>
                     </div>
                     <div class="midThird">
-                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmMidThirdMsg',$option); ?>
+                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmMidThirdMsg',$option); ?>
                     </div>
                     <div class="rightThird">
-                        <?php $option['style2']=1; echo $disp->fillContentAdZones('btmRightThirdMsg',$option); ?>
+                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmRightThirdMsg',$option); ?>
                     </div>
                 </div>
             </div>

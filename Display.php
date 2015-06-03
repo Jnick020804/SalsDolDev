@@ -84,7 +84,9 @@ class Display {
       
       $row = $result->fetch();
       
-      $output='<div id="'.$zoneID.'" class="adZone">';
+      if(!isset($option['style']))
+      {
+       $output='<div id="'.$zoneID.'" class="adZone">';
         $output.='<div class="textZone">';
             $output.='<div class="titleText">';
                 $output.='<span class="titleContent">';
@@ -96,18 +98,18 @@ class Display {
                     $output.=$row['description'];
                 $output.='</span>';
             $output.='</div>';
-            $output.='<div class="link"';
+            $output.='<div class="link">';
                 $output.='<a class="linkContent" href="'.$row['linkTarget'].'">';
                     $output.=$row['linkMessage'];
                 $output.='</a>';
             $output.='</div>';
         $output.='</div>';
         $output.='<div class="imageZone">';
-            $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"';
+            $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"/>';
         $output.='</div>';
-        $output.='</div>';
-        
-        if(isset($option['style2']) && $option['style2']==1)
+      $output.='</div>';
+      }
+        else if(isset($option['style']) && $option['style']==1)
         {
             $output='<div id="'.$zoneID.'" class="adZone2">';
                 $output.='<div class="titleText2">';
@@ -116,19 +118,49 @@ class Display {
                     $output.='</span>';
                 $output.='</div>';
                 $output.='<div class="imageZone2">';
-                    $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"';
+                    $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"/>';
                 $output.='</div>';
                 $output.='<div class="descText2">';
                     $output.='<span class="descContent2">';
                         $output.=$row['description'];
                     $output.='</span>';
                 $output.='</div>';
-                $output.='<div class="link2"';
+                $output.='<div class="link2">';
                     $output.='<a class="linkContent2" href="'.$row['linkTarget'].'">';
                         $output.=$row['linkMessage'];
                     $output.='</a>';
                 $output.='</div>';
             $output.='</div>';
+        }
+        else if(isset($option['style']) && $option['style']==2)
+        {
+            $output='<div id="'.$zoneID.'" class="adZone3">';
+        $output.='<div class="textZone3">';
+            $output.='<div class="textDiv3">';
+                $output.='<div class="titleText3">';
+                    $output.='<span class="titleContent3">';
+                        $output.=$row['title'];
+                    $output.='</span>';
+                $output.='</div>';
+                $output.='<div class="descText3">';
+                    $output.='<span class="descContent3">';
+                        $output.=$row['description'];
+                    $output.='</span>';
+                $output.='</div>';
+            $output.='</div>';   
+            $output.='<div class="imageZone3">';
+                 $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"/>';
+            $output.='</div>';              
+        $output.='</div>';
+        $output.='<div class="link3">';
+            $output.='<a class="linkContent3" href="'.$row['linkTarget'].'">';
+                $output.=$row['linkMessage'];
+            $output.='</a>';
+        $output.='</div>';    
+      $output.='</div>';
+        }
+        else{
+            $output = 'ERROR';
         }
         
         return $output;

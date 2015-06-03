@@ -56,8 +56,8 @@ body{
 #bodyWrapper{
     background-color:#F0EFEF;
     width:70%;
-    max-width:800px;
-    height:1275px;
+    max-width:850px;
+    height:1300px;
     margin: 0 auto;
     padding:0 20px;
 }
@@ -80,7 +80,7 @@ body{
 
 #upperMessage{
 height:70px;
-margin-top:5px;
+margin:5px 0;
 }
 
 .left{
@@ -98,12 +98,13 @@ margin-top:5px;
 
 .middleTop{
     height:320px;
+    padding-top:5px;
         
 }
 
 #sliderDiv{
     height:100%;
-    width:60%;
+    width:59%;
     float:left;
      
 }
@@ -113,17 +114,20 @@ margin-top:5px;
     width:40%;
     height:49.7%;
     border-bottom:2px groove lightgrey;
+    margin-left: 5px;
 }
 
 #midBtmMsg.right{
     float:right;
     width:40%;
     height:50%;
+    margin-left:5px
 }
 
 .middleBtm{
-    height:300px;
+    height:350px;
     width:100%;
+    padding-top:15px;
 }
 
 .leftThird{
@@ -157,6 +161,10 @@ margin-top:5px;
     width:100%;
 }
 
+.top{
+    padding-top:5px;
+}
+
 .bottom{
     height:270px;
     width:100%;
@@ -171,11 +179,13 @@ margin-top:5px;
     width:100%;
     height:49.7%;
     border-bottom:2px groove lightgrey;
+    padding-bottom:10px;
 }
 
 .InnerBottom{
     width:100%;
     height:50%;
+    padding-bottom:10px;
 }
 
 .imgWrapper{
@@ -213,3 +223,80 @@ margin-top:5px;
 #topRightMsg{
    
 }
+
+.messageLinkDiv{
+   padding:15px 0; 
+}
+
+.messageLinkDiv a{
+    color:#B8021A;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size:20px;
+    font-weight: 600;
+}
+
+.adZone{
+    width:100%;
+    height:100%;
+    padding-top:5px
+}
+.textZone{
+    width:40%;
+    float:left;
+    height:100%;
+    padding-bottom:5px;
+}
+.imageZone{
+    width:60%;
+    float:right;
+}
+
+.imageZone img{
+   float:right;
+}
+
+.titleContent,.titleContent{
+    color:#B8021A;
+    font-size:20px;
+    font-weight: 600;
+    
+}
+
+.titleText,.titleText3{
+    height:20%;
+}
+
+.descText{
+    height:60%;
+}
+
+.link{
+    height:20%;
+}
+
+.textZone3{
+    min-height:167px;
+}
+
+.link3{
+    height:20%;
+    width:100%
+}
+
+.textDiv3{
+    float:left;
+    width:50%;
+    
+}
+
+.imageZone3{
+    float:right;
+    width:50%;
+}
+
+.imageZone3 img{
+    
+    width:100%;
+}
+
