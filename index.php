@@ -22,7 +22,53 @@ $disp = new Display();
                 </div>
             </div>
             <div id='navZone'>
-                <?php echo $disp->displayNav(array('Household','Pantry','Party Supplies','Health & Beauty','Office & School','Toys & Crats','Seasonal & Holidays','Apparel'));?>
+                <?php echo $disp->displayNav(array(
+                                                    array
+                                                        (
+                                                            'Household',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                            'Pantry',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Party Supplies',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Health & Beauty',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Office & School',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Toys & Crafts',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Seasonal & Holidays',
+                                                            'http://www.google.com'
+                                                        ),
+                                                    array
+                                                        (
+                                                        
+                                                            'Apparel',
+                                                            'http://www.google.com'
+                                                        )));?>
             </div>
             
         </div>

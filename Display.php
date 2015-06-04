@@ -22,7 +22,12 @@ class Display {
        
        for($i = 0;$i < count($navItems);$i++)
        {
-           $output.="<a class='navLink'><div class='navDiv'>".$navItems[$i]."</div></a>";
+           
+           $output.="<a class='navLink' href='".$navItems[$i][1]."'><div class='navDiv'>".$navItems[$i][0]."</div></a>";
+           if(isset($i[2])&&$i[2]=1 && isset($i[3]))
+           {
+               $output="<div id='nav'><div class='navDiv' onClick='".$i[3]."'>".$navItems[$i][0]."</div>";
+           }
        }
        
        $output.="</div>";

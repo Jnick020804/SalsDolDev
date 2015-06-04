@@ -33,6 +33,7 @@ body{
     height:100%;
     border-left: 1px solid #8B0000;
     border-right: 1px solid #8B0000;
+    text-decoration: none;
 }
 
 .navDiv{
@@ -41,6 +42,7 @@ body{
     height:100%;
     color:#FFFFFF;
     font-weight:500;
+    
 }
 
 #nav{
