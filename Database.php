@@ -51,6 +51,7 @@ class Database {
        try{
            $db = new PDO($this->connString,$this->user,$this->pass);
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+           $sql = $db->prepare($sql);
            $result = $db->query($sql);
            
            

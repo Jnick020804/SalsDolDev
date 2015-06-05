@@ -8,6 +8,15 @@ $disp = new Display();
         <meta charset="UTF-8">
         <title>Sal's Dollar Store Montgomery Alabama</title>
         <link rel='stylesheet' href='main.css' type='text/css'/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <link rel="stylesheet" href='scripts/lean-slider.css' type='text/css'/>
+        <script src='scripts/lean-slider.js'></script>
+        <script>
+            $(document).ready(function() {
+    $('#slider').leanSlider();
+});
+        </script>
+        
     </head>
     <body>
         <div id='topAdZone'>
@@ -112,6 +121,17 @@ $disp = new Display();
                             </div>
                         </div>
                         <div class='midThird'>
+                            <div id='slider'>
+                                <div id='slide1'>
+                                   <?php $options['style']=1; echo $disp->fillContentAdZones('slide1',$options); ?> 
+                                </div>
+                                <div id='slide2'>
+                                    <?php $options['style']=1; echo $disp->fillContentAdZones('slide2',$options); ?>
+                                </div>
+                                <div id='slide3'>
+                                    <?php $options['style']=1; echo $disp->fillContentAdZones('slide3',$options); ?>
+                                </div>
+                            </div>
                             
                         </div>
                         <div class='rightThird'>
@@ -123,12 +143,15 @@ $disp = new Display();
                 </div>
                 <div class='bottom'>
                     <div class="leftThird">
+                        <img/>
                         <?php $option['style']=1; echo $disp->fillContentAdZones('btmLeftThirdMsg',$option); ?>
                     </div>
                     <div class="midThird">
+                        <img/>
                         <?php $option['style']=1; echo $disp->fillContentAdZones('btmMidThirdMsg',$option); ?>
                     </div>
                     <div class="rightThird">
+                        <img/>
                         <?php $option['style']=1; echo $disp->fillContentAdZones('btmRightThirdMsg',$option); ?>
                     </div>
                 </div>

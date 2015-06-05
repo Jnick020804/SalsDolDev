@@ -7,7 +7,7 @@ $db = new Database('Sals_Dollar','localhost','root','root','mysql');
 $userName = strtolower($_POST['usr']);
 $pswd = $_POST['pswd'];
 $attempt=1;
-$loginDest='';
+$loginDest='employee_Dashboard.php';
 
 
 try{
@@ -20,7 +20,7 @@ try{
                 if($result->rowCount() == 0)
                 {
                     
-                    header('Location: admin_Login.html?attempt='.$attempt);
+                    header('Location:login.html?attempt='.$attempt);
                     
                     
                 }
@@ -30,7 +30,7 @@ try{
                     if($row['Password']==$pswd)
                     {
                         session_regenerate_id();
-                        $_SESSION['sess_user_id'] = $row['UsrID'];
+                        $_SESSION['sess_user_id'] = $row['user_ID'];
                         $_SESSION['sess_username'] = $row['UsrName'];
                         session_write_close();
                         header('Location: '.$loginDest);
@@ -38,7 +38,7 @@ try{
                     }
                     else
                     {
-                        header('Location: admin_Login.html?attempt='.$attempt);
+                        header('Location:login.html?attempt='.$attempt);
                         
                     }
                 }
