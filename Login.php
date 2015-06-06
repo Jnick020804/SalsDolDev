@@ -12,8 +12,8 @@ $loginDest='employee_Dashboard.php';
 
 try{
                 
-                $sql='SELECT * FROM USER WHERE USER.UsrName ="'.$userName.'";';
-                $result=$db->queryDb($sql);
+                $sql='SELECT * FROM USER WHERE USER.UsrName =:userName';
+                $result=$db->queryDb($sql,$userName,':userName');
                 
                 
                
@@ -24,7 +24,6 @@ try{
                     
                     
                 }
-                
                 While($row = $result->fetch())
                 {
                     if($row['Password']==$pswd)

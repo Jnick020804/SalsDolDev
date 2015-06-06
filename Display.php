@@ -16,6 +16,7 @@ include 'Database.php';
 class Display {
     
     
+    
    public function displayNav($navItems)
    {
        $output="<div id='nav'>";
@@ -39,8 +40,8 @@ class Display {
    {
       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
       
-      $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID ="'.$zoneID.'";';
-      $result = $db->queryDb($sql);
+      $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID =:zoneID';
+      $result = $db->queryDb($sql,$zoneID,':zoneID');
       
       if(is_string($result))
       {
@@ -71,8 +72,8 @@ class Display {
    {
       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
        
-      $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID ="'.$zoneID.'";';
-      $result = $db->queryDb($sql);
+      $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID =:zoneID';
+      $result = $db->queryDb($sql,$zoneID,':zoneID');
       
       if(is_string($result))
       {
@@ -169,5 +170,42 @@ class Display {
         }
         
         return $output;
+   }
+   
+   public function fillBtmSliderZones($zoneID, $options=null)
+   {
+       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
+       
+       $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID =:zoneID';
+       $result = $db->queryDb($sql,$zoneID,':zoneID');
+       
+       if(is_string($result))
+      {
+          return $result;
+      }
+      else if($result->rowCount() > 1)
+      {
+          return 'ERROR TO MANY ROWS RETURNED';
+      }
+      else if($result->rowCount() <= 0)
+      {
+          return 'ERROR NO ROWS RETURNED';
+      }
+      
+      $row = $result->fetch();
+       
+       $output='<div id="'.$zoneID.'Div">';
+            $output.='<div class="sliderImgDiv">';
+                $output.='<img alt="'.$zoneID.' image" src="'.$row['imgSrc'].'"/>';
+            $output.='</div>';
+            $output.='<div class="sliderTitleDiv">';
+                $output.='<a class="linkContent3" href="'.$row['linkTarget'].'">';
+                    $output.=$row['linkMessage'];
+                $output.='</a>';
+            $output.='</div>';
+            
+       $output.='</div>';
+       
+       return $output;
    }
 }

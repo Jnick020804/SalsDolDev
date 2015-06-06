@@ -15,6 +15,9 @@ $disp = new Display();
             $(document).ready(function() {
     $('#slider').leanSlider();
 });
+$(document).ready(function() {
+    $('#slider2').leanSlider();
+});
         </script>
         
     </head>
@@ -139,7 +142,42 @@ $disp = new Display();
                         </div>
                 </div>
                 <div id="sliderBtm">
-                        
+                    <div id="slider2">
+                        <div id="btmSlide1">
+                            <div id="inslide1">
+                                <?php echo $disp->fillBtmSliderZones('inslide1'); ?>
+                            </div>
+                            <div id="inslide2">
+                                <?php echo $disp->fillBtmSliderZones('inslide2'); ?>
+                            </div>
+                            <div id="inslide3">
+                                <?php echo $disp->fillBtmSliderZones('inslide3'); ?>
+                            </div>
+                            <div id="inslide4">
+                                <?php echo $disp->fillBtmSliderZones('inslide4'); ?>
+                            </div>
+                            <div id="inslide5">
+                                <?php echo $disp->fillBtmSliderZones('inslide5'); ?>
+                            </div>
+                        </div>
+                        <div id="btmSlide2">
+                            <div id="inslide6">
+                                <?php echo $disp->fillBtmSliderZones('inslide6'); ?>
+                            </div>
+                            <div id="inslide7">
+                                <?php echo $disp->fillBtmSliderZones('inslide7'); ?>
+                            </div>
+                            <div id="inslide8">
+                                <?php echo $disp->fillBtmSliderZones('inslide8'); ?>
+                            </div>
+                            <div id="inslide9">
+                                <?php echo $disp->fillBtmSliderZones('inslide9'); ?>
+                            </div>
+                            <div id="inslide10">
+                                <?php echo $disp->fillBtmSliderZones('inslide10'); ?>
+                            </div>
+                        </div>
+                    </div>    
                 </div>
                 <div class='bottom'>
                     <div class="leftThird">
@@ -158,7 +196,31 @@ $disp = new Display();
             </div>
         </div>
         <div id='footer'>
-                        
+            <div id='hours'>
+                <div class='footerLabel'>
+                    <span>Hours:</span>
+                </div>
+                <div class='hoursText'>
+                    <span class='days'>Monday-Saturday</span><br/>
+                    <span class='hours'>10:00 A.M - 8:00 PM</span><br/>
+                    <span class='days'>Sunday</span><br/>
+                    <span class='hours'>Closed</span>                
+                </div>
+            </div>
+            <div id='address'>
+                <div class='footerLabel'>
+                    <span>Location:</span>
+                </div>
+                <div class='locText'>
+                    <span>Winn-Dixie Shopping Center</span><br/>
+                    <span>1778 Carter Hill Road</span><br/>
+                    <span>Montgomery, Al.</span><br/>
+                    <span class='phone'>Phone: (334) 239-7019</span>
+                </div>
+            </div>
+            <div id='about'>
+                
+            </div>
         </div>
         
     </body>
