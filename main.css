@@ -2,6 +2,10 @@ body{
     background-color:lightgrey;
 }
 
+html, body{
+   min-height:100%;
+}
+
 #topAdZone{
     width:70%;
     max-width:1000px;
@@ -36,6 +40,19 @@ body{
     text-decoration: none;
 }
 
+.navButton{
+    width:12%;
+    float:left;
+    border-left: 1px solid #8B0000;
+    border-right: 1px solid #8B0000;
+    text-decoration: none;
+    text-align:center;
+    padding: 8px 0;
+    color:#FFFFFF;
+    font-weight:500;
+    height:34px;
+}
+
 .navDiv{
     text-align:center;
     padding: 8px 0;
@@ -51,7 +68,7 @@ body{
     margin:0 auto;
 }
 
-.navLink:hover{
+.navLink:hover,.navButton:hover{
     background-color:#BA021B;
 }
 
@@ -62,6 +79,20 @@ body{
     height:1455px;
     margin: 0 auto;
     padding:0 20px;
+}
+
+#DbBodyWrapper{
+    background-color:#F0EFEF;
+    width:80%;
+    max-width:850px;
+    height:100%;
+}
+
+#DbBody{
+   background-color:#F0EFEF;
+    width:100%;
+    max-width:800px;
+    margin:0 auto; 
 }
 
 #bodyZone{
@@ -411,9 +442,9 @@ margin:5px 0;
     margin:0 auto;
 }
 
-#hours,#address{
+#hours,#address,#about{
     height:100%;
-    width:33%;
+    width:33.33%;
     text-align:center;
     float:left;
 }
@@ -435,13 +466,51 @@ margin:5px 0;
     margin-bottom:5px;
 }
 
-.locText{
+.locText,.aboutText,.aboutText a{
     font-size:18px;
     font-weight:500;
     color:#FFFFFF;
     margin-bottom:5px;
+    text-decoration: none;
 }
 
 .phone{
     padding-top:10px;
+}
+
+#adNav{
+    width:20%;
+    height: 100%;
+}
+
+#adZoneMenu{
+    width:100%;
+    color:#FFFFFF;
+    font-weight: 500;
+    background-image: -o-linear-gradient(#CC021D 0%, #800011 63%);
+    background-image: -moz-linear-gradient(#CC021D 0%, #800011 63%);
+    background-image: -webkit-linear-gradient(#CC021D 0%, #800011 63%);
+    background-image: -ms-linear-gradient(#CC021D 0%, #800011 63%);
+    background-image: linear-gradient(#CC021D 0%, #800011 63%);
+    
+    
+}
+
+#adZoneMenu #topLeftMsg,#adZoneMenu #topRightMsg,
+#adZoneMenu #midTopMsg, #adZoneMenu #midBtmMsg,
+#adZoneMenu #innerTopMsg, #adZoneMenu #innerBtmMsg,
+#adZoneMenu #slide1, #adZoneMenu #slide2,#adZoneMenu #slide3,#adZoneMenu #rightThirdMsg,
+#adZoneMenu #inslide1,#adZoneMenu #inslide2,
+#adZoneMenu #inslide3,#adZoneMenu #inslide4,
+#adZoneMenu #inslide5, #adZoneMenu #inslide6,
+#adZoneMenu #inslide7, #adZoneMenu #inslide8,
+#adZoneMenu #inslide9, #adZoneMenu #inslide10,
+#adZoneMenu #btmLeftThirdMsg, #adZoneMenu #btmRightThirdMsg,
+#adZoneMenu #btmMidThirdMsg
+{
+    width:100%;
+    text-align: center;
+    border-top: 1px solid #8B0000;
+    border-bottom:1px solid #8B0000;
+    
 }

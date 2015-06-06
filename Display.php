@@ -25,12 +25,26 @@ class Display {
        {
            
            $output.="<a class='navLink' href='".$navItems[$i][1]."'><div class='navDiv'>".$navItems[$i][0]."</div></a>";
-           if(isset($i[2])&&$i[2]=1 && isset($i[3]))
+           if(isset($navItems[$i][2])&&$navItems[$i][2]=1 && isset($navItems[$i][3]))
            {
-               $output="<div id='nav'><div class='navDiv' onClick='".$i[3]."'>".$navItems[$i][0]."</div>";
+               $output="<div id='nav'><div class='navButton' onClick='".$navItems[$i][3]."'>".$navItems[$i][0]."</div>";
            }
        }
        
+       $output.="</div>";
+       
+       return $output;
+   }
+   
+   public function displayMenu($menuItems)
+   {
+       $output="<div id='adZoneMenu'>";
+       for($i = 0; $i <count($menuItems); $i++)
+       {
+           $output.="<div id='".$menuItems[$i][2]."' onclick='".$menuItems[$i][1]."' class='menuItem'>";
+                $output.="<span class='menuItemText'>".$menuItems[$i][0]."</span>";
+           $output.="</div>";
+       }
        $output.="</div>";
        
        return $output;

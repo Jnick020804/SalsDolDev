@@ -219,7 +219,17 @@ $(document).ready(function() {
                 </div>
             </div>
             <div id='about'>
-                
+                <div class='footerLabel'>
+                    <span>About Us:</span>
+                </div>
+                <div class='aboutText'>
+                    <a href='https://www.google.com/maps/place/Sals+Dollar/@32.35832,-86.282907,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x3fe5bc5c069d231c'>
+                        <span>Directions</span><br/>
+                    </a>
+                    <a href="http://www.google.com">
+                        <span>About Us</span>
+                    </a>
+                </div>
             </div>
         </div>
         
