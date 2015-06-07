@@ -50,7 +50,7 @@ and open the template in the editor.
         </div>
         <div id='DbBodyWrapper'>
             <div id='DbBody'>
-                <div class='welcomeText'>
+                <div id='welcomeText'>
                     <p class='welcome'>
                         Welcome to the Sal's Dollar Dashboard. Here you can Edit the Ad zones 
                         over the entire site. When you click on the "Edit Ad Zones" Button
@@ -58,6 +58,16 @@ and open the template in the editor.
                         select the content that you would like to display in it. Make sure you pay
                         attention to any constraints such as max picture size and text length.
                     </p>
+                </div>
+                <div id="zoneKey">
+                    <div id="upper">
+                        <div id="leftAd">
+                            
+                        </div>
+                        <div id="rightAd">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -87,5 +97,22 @@ and open the template in the editor.
                     array('Bottom Mid Zone','showEditWindow(this.id)','btmMidThirdMsg'),
                     array('Bottom Right Zone','showEditWindow(this.id)','btmRightThirdMsg'))); ?>
         </div>
+        <script>
+        function editZones()
+        {
+            if(document.getElementById('welcomeText').style.display=='block')
+            {
+                document.getElementById('welcomeText').style.display='none';
+                document.getElementById('adNav').style.display='block';
+                
+            }
+            else
+            {
+                document.getElementById('welcomeText').style.display='block';
+                document.getElementById('adNav').style.display='none';
+            }
+        }
+    </script>
     </body>
+    
 </html>

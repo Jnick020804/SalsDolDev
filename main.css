@@ -84,8 +84,8 @@ html, body{
 #DbBodyWrapper{
     background-color:#F0EFEF;
     width:80%;
-    max-width:850px;
     height:100%;
+    float:right;
 }
 
 #DbBody{
@@ -481,18 +481,14 @@ margin:5px 0;
 #adNav{
     width:20%;
     height: 100%;
+    display:none;
 }
 
 #adZoneMenu{
     width:100%;
     color:#FFFFFF;
     font-weight: 500;
-    background-image: -o-linear-gradient(#CC021D 0%, #800011 63%);
-    background-image: -moz-linear-gradient(#CC021D 0%, #800011 63%);
-    background-image: -webkit-linear-gradient(#CC021D 0%, #800011 63%);
-    background-image: -ms-linear-gradient(#CC021D 0%, #800011 63%);
-    background-image: linear-gradient(#CC021D 0%, #800011 63%);
-    
+    background-color:#C4021C;
     
 }
 

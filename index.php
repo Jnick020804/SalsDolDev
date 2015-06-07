@@ -202,7 +202,7 @@ $(document).ready(function() {
                 </div>
                 <div class='hoursText'>
                     <span class='days'>Monday-Saturday</span><br/>
-                    <span class='hours'>10:00 A.M - 8:00 PM</span><br/>
+                    <span class='hours'>9:00 AM - 8:00 PM</span><br/>
                     <span class='days'>Sunday</span><br/>
                     <span class='hours'>Closed</span>                
                 </div>
