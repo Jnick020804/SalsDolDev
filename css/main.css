@@ -1,9 +1,9 @@
 body{
     background-color:lightgrey;
+    overflow:scroll;
 }
 
 html, body{
-   min-height:100%;
 }
 
 #topAdZone{
@@ -83,7 +83,7 @@ html, body{
 
 #DbBodyWrapper{
     background-color:#F0EFEF;
-    width:80%;
+    width:79%;
     height:100%;
     float:right;
 }
@@ -479,13 +479,12 @@ margin:5px 0;
 }
 
 #adNav{
-    width:20%;
+    width:21%;
     height: 100%;
     display:none;
 }
 
 #adZoneMenu{
-    width:100%;
     color:#FFFFFF;
     font-weight: 500;
     background-color:#C4021C;
@@ -505,8 +504,29 @@ margin:5px 0;
 #adZoneMenu #btmMidThirdMsg
 {
     width:100%;
+    height:40.5px;
     text-align: center;
     border-top: 1px solid #8B0000;
     border-bottom:1px solid #8B0000;
+    clear:left;
     
+}
+
+.menuItem{
+    font-size:18px;
+    font-weight:600;
+}
+
+#adZoneMenu #topLeftMsg:hover,#adZoneMenu #topRightMsg:hover,
+#adZoneMenu #midTopMsg:hover, #adZoneMenu #midBtmMsg:hover,
+#adZoneMenu #innerTopMsg:hover, #adZoneMenu #innerBtmMsg:hover,
+#adZoneMenu #slide1:hover, #adZoneMenu #slide2:hover,#adZoneMenu #slide3:hover,#adZoneMenu #rightThirdMsg:hover,
+#adZoneMenu #inslide1:hover,#adZoneMenu #inslide2:hover,
+#adZoneMenu #inslide3:hover,#adZoneMenu #inslide4:hover,
+#adZoneMenu #inslide5:hover, #adZoneMenu #inslide6:hover,
+#adZoneMenu #inslide7:hover, #adZoneMenu #inslide8:hover,
+#adZoneMenu #inslide9:hover, #adZoneMenu #inslide10:hover,
+#adZoneMenu #btmLeftThirdMsg:hover, #adZoneMenu #btmRightThirdMsg:hover,
+#adZoneMenu #btmMidThirdMsg:hover{
+    background-color:#800011;
 }

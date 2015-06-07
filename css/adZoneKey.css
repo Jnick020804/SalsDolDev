@@ -1,2 +1,134 @@
+#upper
+{
+    height:80px;
+    width:100%;
+    border:1px solid black;
+}
 
+#leftAd
+{
+    width:49%;
+    float:left;
+    height:100%;
+    border-right:1px solid black;
+    
+}
 
+#zoneKey
+{
+    display:none;
+}
+
+#rightAd
+{
+    width:50%;
+    float:right;
+    height:100%;
+}
+
+#center
+{
+    width:100%;
+    height:300px;
+    border:1px solid black;
+}
+
+#midSlider{
+    height:100%;
+    width:59%;
+    float:left;
+}
+
+#midAdZone
+{
+    height:100%;
+    width:40%;
+    float:right;
+    border-left:1px solid black;
+}
+
+#midUpAd{
+    width:100%;
+    height:50%;
+    border-bottom:1px solid black;
+}
+
+#midDwnAd{
+    width:100%;
+    height:50%;
+}
+
+#lowerCenter
+{
+    height:300px;
+    width:100%;
+    border:1px solid black;
+}
+
+.leftLCthird{
+    height:100%;
+    width:33%;
+    border-right:1px solid black;
+    float:left;
+}
+
+.midLCthird{
+    height:100%;
+    width:33%;
+    border-right:1px solid black;
+    float:left;
+}
+
+.rightLCthird{
+    height:100%;
+    width:33%;
+    float:right;
+}
+
+#upInnerAd{
+    width:100%;
+    height:49.5%;
+    border-bottom: 1px solid black;
+}
+
+#downInnerAd{
+    width:100%;
+    height:50%;
+}
+
+#upperBottom
+{
+    height:200px;
+    width:100%;
+    border:1px solid black;
+}
+
+#bottom
+{
+    height:300px;
+    width:100%;
+    border:1px solid black;
+}
+
+#bottomLeftThird
+{
+    height:100%;
+    width:33%;
+    border-right:1px solid black;
+    float:left;
+}
+
+#bottomMidThird
+{
+    height:100%;
+    width:33%;
+    border-right:1px solid black;
+    float:left;
+}
+
+#bottomRightThird
+{
+    height:100%;
+    width:33%;
+    float:right;
+}

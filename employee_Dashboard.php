@@ -73,6 +73,71 @@ and open the template in the editor.
                             </div>
                         </div>
                     </div>
+                    <div id='center'>
+                        <div id='midSlider'>
+                            <div class="adText">
+                                <span>Upper Slider</span>
+                            </div>
+                        </div>
+                        <div id='midAdZone'>
+                            <div id='midUpAd'>
+                                <div class="adText">
+                                <span>Mid Top Zone</span>
+                            </div>
+                            </div>
+                            <div id='midDwnAd'>
+                                <div class="adText">
+                                <span>Mid Bottom Zone</span>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='lowerCenter'>
+                        <div class='leftLCthird'>
+                            <div id='upInnerAd'>
+                                <div class="adText">
+                                <span>Inner Top Zone</span>
+                            </div>
+                            </div>
+                            <div id='downInnerAd'>
+                                <div class="adText">
+                                <span>Inner Bottom Zone</span>
+                            </div>
+                            </div>
+                        </div>
+                        <div class='midLCthird'>
+                            <div class="adText">
+                                <span>Slides 1-3</span>
+                            </div>
+                        </div>
+                        <div class='rightLCthird'>
+                            <div class="adText">
+                                <span>Right Third Zone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='upperBottom'>
+                        <div class="adText">
+                                <span>Bottom Slides 1-10</span>
+                            </div>
+                    </div>
+                    <div id='bottom'>
+                        <div id='bottomLeftThird'>
+                            <div class="adText">
+                                <span>Bottom Left Zone</span>
+                            </div>
+                        </div>
+                        <div id='bottomMidThird'>
+                            <div class="adText">
+                                <span>Bottom Mid Zone</span>
+                            </div>
+                        </div>
+                        <div id='bottomRightThird'>
+                            <div class="adText">
+                                <span>Bottom Right Zone</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,12 +174,13 @@ and open the template in the editor.
             {
                 document.getElementById('welcomeText').style.display='none';
                 document.getElementById('adNav').style.display='block';
-                
+                document.getElementById('zoneKey').style.display='block';
             }
             else
             {
                 document.getElementById('welcomeText').style.display='block';
                 document.getElementById('adNav').style.display='none';
+                document.getElementById('zoneKey').style.display='none';
             }
         }
     </script>
