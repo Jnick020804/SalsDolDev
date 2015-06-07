@@ -7,7 +7,7 @@ $disp = new Display();
     <head>
         <meta charset="UTF-8">
         <title>Sal's Dollar Store Montgomery Alabama</title>
-        <link rel='stylesheet' href='main.css' type='text/css'/>
+        <link rel='stylesheet' href='css/main.css' type='text/css'/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <link rel="stylesheet" href='scripts/lean-slider.css' type='text/css'/>
         <script src='scripts/lean-slider.js'></script>

@@ -21,7 +21,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel='stylesheet' href='main.css' type='text/css'/>
+        <link rel='stylesheet' href='css/main.css' type='text/css'/>
+        <link rel='stylesheet' href='css/adZoneKey.css' tyep='text/css'>
         <title>Welcome to the Employee Dashboard</title>
     </head>
     <body>
@@ -62,10 +63,14 @@ and open the template in the editor.
                 <div id="zoneKey">
                     <div id="upper">
                         <div id="leftAd">
-                            
+                            <div class="adText">
+                                <span>Top Left Zone</span>
+                            </div>
                         </div>
                         <div id="rightAd">
-                            
+                            <div class="adText">
+                                <span>Top Right Zone</span>
+                            </div>
                         </div>
                     </div>
                 </div>
