@@ -63,30 +63,30 @@ and open the template in the editor.
                 <div id="zoneKey">
                     <div id="upper">
                         <div id="leftAd">
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Top Left Zone</span>
                             </div>
                         </div>
-                        <div id="rightAd">
-                            <div class="adText">
+                        <div id="rightAdvert">
+                            <div class="adText1">
                                 <span>Top Right Zone</span>
                             </div>
                         </div>
                     </div>
                     <div id='center'>
                         <div id='midSlider'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Upper Slider</span>
                             </div>
                         </div>
                         <div id='midAdZone'>
                             <div id='midUpAd'>
-                                <div class="adText">
+                                <div class="adText1">
                                 <span>Mid Top Zone</span>
                             </div>
                             </div>
                             <div id='midDwnAd'>
-                                <div class="adText">
+                                <div class="adText1">
                                 <span>Mid Bottom Zone</span>
                             </div>
                             </div>
@@ -95,45 +95,45 @@ and open the template in the editor.
                     <div id='lowerCenter'>
                         <div class='leftLCthird'>
                             <div id='upInnerAd'>
-                                <div class="adText">
+                                <div class="adText1">
                                 <span>Inner Top Zone</span>
                             </div>
                             </div>
                             <div id='downInnerAd'>
-                                <div class="adText">
+                                <div class="adText1">
                                 <span>Inner Bottom Zone</span>
                             </div>
                             </div>
                         </div>
                         <div class='midLCthird'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Slides 1-3</span>
                             </div>
                         </div>
                         <div class='rightLCthird'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Right Third Zone</span>
                             </div>
                         </div>
                     </div>
                     <div id='upperBottom'>
-                        <div class="adText">
+                        <div class="adText1">
                                 <span>Bottom Slides 1-10</span>
                             </div>
                     </div>
                     <div id='bottom'>
                         <div id='bottomLeftThird'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Bottom Left Zone</span>
                             </div>
                         </div>
                         <div id='bottomMidThird'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Bottom Mid Zone</span>
                             </div>
                         </div>
                         <div id='bottomRightThird'>
-                            <div class="adText">
+                            <div class="adText1">
                                 <span>Bottom Right Zone</span>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ and open the template in the editor.
         <script>
         function editZones()
         {
-            if(document.getElementById('welcomeText').style.display=='block')
+            if(document.getElementById('welcomeText').style.display==='block')
             {
                 document.getElementById('welcomeText').style.display='none';
                 document.getElementById('adNav').style.display='block';
@@ -182,6 +182,11 @@ and open the template in the editor.
                 document.getElementById('adNav').style.display='none';
                 document.getElementById('zoneKey').style.display='none';
             }
+        }
+        
+        function showEditWindow(id)
+        {
+            window.open('zoneEditWindow.php?id='+id,'','width=500,height=500');
         }
     </script>
     </body>
