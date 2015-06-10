@@ -1,22 +1,28 @@
+<?php
+include 'Display.php';
+$disp = new Display();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php $zoneID = $_GET['id'] ?>
+<?php $zoneID = $_GET['id'];
+$info = $disp->getAdZoneInfo($zoneID);?>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Edit Zone</title>
+         <link rel='stylesheet' href='css/editZone.css' type='text/css'/>
     </head>
-    <body>
+    <body style="height:400px">
         <div id="contentBox">
             <form method="post" action="changeZone.php"> 
                 <div id="contentPortion">
                     <div id="leftHalf">
                         <div id="imageContainer">
-                            <image id="advertImage" src="" alt="advert"/>
+                            <img id="advertImage" src="<?php echo $info['imgSrc'] ?>" alt="advert"/>
                         </div>
                         <div id="browseButtonBox">
                             <div id="browseButton">
@@ -30,7 +36,7 @@ and open the template in the editor.
                                 <span>Title:</span>
                             </div>
                             <div id="titleField">
-                                <input type="text" name="title" id="title" value="">
+                                <textarea name="title" id="title" rows="10" cols="30"><?php echo $info['title'] ?></textarea>
                             </div>
                         </div>
                         <div id="descBox">
@@ -38,7 +44,7 @@ and open the template in the editor.
                                 <span>Description:</span>
                             </div>
                             <div id="descField">
-                                <input type="text" name="desc" id="desc" value="">
+                                <textarea name="desc" id="desc" rows="10" cols="30"><?php echo $info['description'] ?></textarea>
                             </div>
                         </div>
                         <div id="linkTextBox">
@@ -46,7 +52,7 @@ and open the template in the editor.
                                 <span>Link:</span>
                             </div>
                             <div id="linkTextField">
-                                <input type="text" name="link" id="link" value="">
+                                <textarea name="link" id="link" rows="10" cols="30"><?php echo $info['linkMessage'] ?></textarea>
                             </div>    
                         </div>
                         <div id="linkTargetBox">
@@ -54,7 +60,7 @@ and open the template in the editor.
                                 <span>Link Target:</span>
                             </div>
                             <div id="linkTargetField">
-                                <input type="text" name="target" id="target" value="">
+                                <textarea name="target" id="target" rows="10" cols="30"><?php echo $info['linkTarget'] ?></textarea>
                             </div>
                         </div>
                     </div>
@@ -64,10 +70,8 @@ and open the template in the editor.
                         <div id="confirmButtonDiv">
                             <input type="submit" name="submit" id="submit" value="Confirm">
                         </div>
-                        <div id="cancelButtonDiv">
-                            <div id="cancelButton">
-                                <span>Cancel</span>
-                            </div>
+                        <div id="cancelButton">
+                            <span>Cancel</span>
                         </div>
                     </div>
                 </div>

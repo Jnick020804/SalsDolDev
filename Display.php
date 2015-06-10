@@ -222,4 +222,29 @@ class Display {
        
        return $output;
    }
+   
+   public function getAdZoneInfo($zoneID)
+   {
+       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
+       
+       $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID =:zoneID';
+       $result = $db->queryDb($sql,$zoneID,':zoneID');
+       
+       if(is_string($result))
+      {
+          return $result;
+      }
+      else if($result->rowCount() > 1)
+      {
+          return 'ERROR TO MANY ROWS RETURNED';
+      }
+      else if($result->rowCount() <= 0)
+      {
+          return 'ERROR NO ROWS RETURNED';
+      }
+      
+      $row = $result->fetch();
+      
+      return $row;
+   }
 }
