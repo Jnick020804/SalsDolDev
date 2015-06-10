@@ -23,6 +23,7 @@ $info = $disp->getAdZoneInfo($zoneID);?>
                     <div id="leftHalf">
                         <div id="imageContainer">
                             <img id="advertImage" src="<?php echo $info['imgSrc'] ?>" alt="advert"/>
+                            <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $info['imgSrc'] ?>">
                         </div>
                         <div id="browseButtonBox">
                             <div id="browseButton">

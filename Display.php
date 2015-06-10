@@ -12,6 +12,7 @@
  * @author SirJared
  */
 include 'Database.php';
+include 'server.php';
 
 class Display {
     
@@ -106,7 +107,7 @@ class Display {
       
       if(!isset($option['style']))
       {
-       $output='<div id="'.$zoneID.'" class="adZone">';
+       $output='<div id="'.$zoneID.'" class="advertZone">';
         $output.='<div class="textZone">';
             $output.='<div class="titleText">';
                 $output.='<span class="titleContent">';
@@ -131,7 +132,7 @@ class Display {
       }
         else if(isset($option['style']) && $option['style']==1)
         {
-            $output='<div id="'.$zoneID.'" class="adZone2">';
+            $output='<div id="'.$zoneID.'" class="advertZone2">';
                 $output.='<div class="titleText2">';
                     $output.='<span class="titleContent2">';
                         $output.=$row['title'];
@@ -154,7 +155,7 @@ class Display {
         }
         else if(isset($option['style']) && $option['style']==2)
         {
-            $output='<div id="'.$zoneID.'" class="adZone3">';
+            $output='<div id="'.$zoneID.'" class="advertZone3">';
         $output.='<div class="textZone3">';
             $output.='<div class="textDiv3">';
                 $output.='<div class="titleText3">';
@@ -246,5 +247,28 @@ class Display {
       $row = $result->fetch();
       
       return $row;
+   }
+   
+   public function displayImgFrmSrvr()
+   {
+       $svr = new server();
+       
+       $res = $svr->getFolderContents('./img/');
+       
+       $output ='<div id="imgGalDiv">';
+       
+       for($i =0; $i < count($res);$i++)
+       {
+           $output.='<div class="galImgHolder" onClick="saveImg(pic'.$i.')">';
+                $output.='<img src="'.$res[$i].'" alt="pic'.$i.'">';
+                $output.='<div id="pic'.$i.'" style="display:none">';
+                    $output.=$res[$i];
+                $output.='</div>';
+           $output.='</div>';
+       }
+       
+       $output.='</div>';
+       
+       return $output;
    }
 }
