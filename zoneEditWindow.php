@@ -83,6 +83,5 @@ $info = $disp->getAdZoneInfo($zoneID);?>
                 </div>
             </form>     
         </div>
-        <script>$.featherlight()</script>
     </body>
 </html>

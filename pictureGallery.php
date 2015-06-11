@@ -17,5 +17,15 @@ and open the template in the editor.
         <div id="galleryContainerDiv">
             <?php echo $disp->displayImgFrmSrvr() ?>
         </div>
+        <div id="uploadDiv">
+            <form action="upload.php">
+                <div id="brwButtonDiv">
+                    <input type="file" id="brwButton" name="img" accept="image/*">
+                </div>
+                <div id="uploadButtonDiv">
+                    <input type="submit" id="uploadButton" value="Upload">
+                </div>
+            </form>
+        </div>
     </body>
 </html>

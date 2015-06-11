@@ -127,3 +127,57 @@
     text-align:center;
     border:1px solid black;
 }
+
+#imgGalDiv{
+    width:100%;
+    height:275px;
+    overflow:scroll;
+}
+
+.galImgHolder{
+    width:33.3%;
+    max-width:160px;
+    float:left;
+    margin:0 5px;
+    
+}
+
+.galImgHolder img{
+    
+    height:100%;
+    width:100%;
+    max-width:160px;
+    
+}
+
+#uploadDiv{
+    height:120px;
+    width:100%;
+    border-top:1px solid black;
+    margin-top:5px;
+    padding-top:20px;
+}
+
+#brwButtonDiv{
+    width:50%;
+    float:right;
+}
+
+#uploadButtonDiv{
+    width:50%;
+    float:left;
+}
+
+#brwButton,#uploadButton{
+    display:block;
+    margin:0 auto;
+    height:40px;
+    font-size:18px;
+}
+
+#uploadButton{
+    background-color:#BA021B;
+    color:#ffffff;
+    font-weight:500;
+    text-align:center;
+}
