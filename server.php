@@ -21,5 +21,26 @@ class server {
     
         return $images;
     }
+    
+    public function upload($ToDir,$file)
+    {
+        $target=$ToDir.basename($file['name']);
+        $uploadOK=1;
+        $type=pathinfo($target,PATHINFO_EXTENSION);
+        
+        if(file_exists($target))
+        {
+            return 2;
+            
+        }
+        else if(move_uploaded_file($file['tmp_name'],$target))
+        {  
+            return 0;
+        }
+        else
+        {
+            return 1;
+        }
+    }
 
 }

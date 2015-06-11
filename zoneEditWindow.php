@@ -9,7 +9,17 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php $zoneID = $_GET['id'];
-$info = $disp->getAdZoneInfo($zoneID);?>
+$info = $disp->getAdZoneInfo($zoneID);
+session_start();
+
+if(isset($_SESSION['chosenPic']))
+{
+    $pic = $_SESSION['chosenPic'];
+}
+ else {
+    $pic = $info['imgSrc'];
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -25,8 +35,8 @@ $info = $disp->getAdZoneInfo($zoneID);?>
                 <div id="contentPortion">
                     <div id="leftHalf">
                         <div id="imageContainer">
-                            <img id="advertImage" src="<?php echo $info['imgSrc'] ?>" alt="advert"/>
-                            <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $info['imgSrc'] ?>">
+                            <img id="advertImage" src="<?php echo $pic ?>" alt="advert"/>
+                            <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $pic ?>">
                         </div>
                         <div id="browseButtonBox">
                             <a href="#" data-featherlight="pictureGallery.php">

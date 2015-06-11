@@ -18,7 +18,7 @@ and open the template in the editor.
             <?php echo $disp->displayImgFrmSrvr() ?>
         </div>
         <div id="uploadDiv">
-            <form action="upload.php">
+            <form action="upload.php" method="post"  enctype="multipart/form-data">
                 <div id="brwButtonDiv">
                     <input type="file" id="brwButton" name="img" accept="image/*">
                 </div>
