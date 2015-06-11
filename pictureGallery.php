@@ -11,8 +11,9 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="css/editZone.css" type="text/css"/>
     </head>
-    <body>
+    <body style="max-height: 500px;max-width: 500px;">
         <div id="galleryContainerDiv">
             <?php echo $disp->displayImgFrmSrvr() ?>
         </div>

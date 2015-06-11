@@ -14,6 +14,9 @@ $info = $disp->getAdZoneInfo($zoneID);?>
     <head>
         <meta charset="UTF-8">
         <title>Edit Zone</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="scripts/featherlight.min.js"></script>
+        <link rel="stylesheet" href='scripts/featherlight.min.css' type='text/css'/>
          <link rel='stylesheet' href='css/editZone.css' type='text/css'/>
     </head>
     <body style="height:400px">
@@ -26,9 +29,11 @@ $info = $disp->getAdZoneInfo($zoneID);?>
                             <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $info['imgSrc'] ?>">
                         </div>
                         <div id="browseButtonBox">
-                            <div id="browseButton">
-                                <span>Browse</span>
-                            </div>
+                            <a href="#" data-featherlight="pictureGallery.php">
+                                <div id="browseButton">
+                                    <span>Browse</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div id="rightHalf">
@@ -78,5 +83,6 @@ $info = $disp->getAdZoneInfo($zoneID);?>
                 </div>
             </form>     
         </div>
+        <script>$.featherlight()</script>
     </body>
 </html>
