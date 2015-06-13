@@ -10,15 +10,6 @@ and open the template in the editor.
 -->
 <?php $zoneID = $_GET['id'];
 $info = $disp->getAdZoneInfo($zoneID);
-session_start();
-
-if(isset($_SESSION['chosenPic']))
-{
-    $pic = $_SESSION['chosenPic'];
-}
- else {
-    $pic = $info['imgSrc'];
-}
 ?>
 <html>
     <head>
@@ -32,11 +23,12 @@ if(isset($_SESSION['chosenPic']))
     <body style="height:400px">
         <div id="contentBox">
             <form method="post" action="changeZone.php"> 
+                <input type="hidden" name="zoneID" value="<?php echo $zoneID;?>"
                 <div id="contentPortion">
                     <div id="leftHalf">
                         <div id="imageContainer">
-                            <img id="advertImage" src="<?php echo $pic ?>" alt="advert"/>
-                            <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $pic ?>">
+                            <img id="advertImage" src="<?php echo $info['imgSrc'] ?>" alt="advert"/>
+                            <input type="hidden" name="imgSrc" id="imgSrc" value="<?php echo $info['imgSrc'] ?>">
                         </div>
                         <div id="browseButtonBox">
                             <a href="#" data-featherlight="pictureGallery.php">
@@ -93,5 +85,17 @@ if(isset($_SESSION['chosenPic']))
                 </div>
             </form>     
         </div>
+        <script>
+            function setNewPicture(id)
+            {
+                src = document.getElementById(id).getAttribute('src');
+                
+                document.getElementById('advertImage').setAttribute('src',src);
+                document.getElementById('imgSrc').setAttribute('value',src);
+
+                
+                alert('IMAGE CHANGED' + document.getElementById('imgSrc').getAttribute('value'));
+            }
+        </script>
     </body>
 </html>

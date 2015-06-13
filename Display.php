@@ -259,11 +259,8 @@ class Display {
        
        for($i =0; $i < count($res);$i++)
        {
-           $output.='<div class="galImgHolder" onClick="saveImg(pic'.$i.')">';
-                $output.='<img src="'.$res[$i].'" alt="pic'.$i.'">';
-                $output.='<div id="pic'.$i.'" style="display:none">';
-                    $output.=$res[$i];
-                $output.='</div>';
+           $output.="<div class='galImgHolder' onClick='setNewPicture(\"pic".$i."\")'>";
+                $output.='<img id="pic'.$i.'" src="'.$res[$i].'" alt="pic'.$i.'">';
            $output.='</div>';
        }
        

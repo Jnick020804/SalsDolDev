@@ -76,6 +76,7 @@ class Database {
            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
            $res = $db->exec($sql);
            
+           
       
         
         }
