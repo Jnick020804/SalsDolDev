@@ -268,4 +268,106 @@ class Display {
        
        return $output;
    }
+   
+   public function getInnerPageInfo($id)
+   {
+       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
+       
+       $sql='SELECT * FROM Inner_Page WHERE Inner_Page.page_ID =:pageID';
+       $result = $db->queryDb($sql,$id,':pageID');
+       
+       if(is_string($result))
+      {
+          return $result;
+      }
+      else if($result->rowCount() > 1)
+      {
+          return 'ERROR TO MANY ROWS RETURNED FROM '.$id;
+      }
+      else if($result->rowCount() <= 0)
+      {
+          return 'ERROR NO ROWS RETURNED FROM '.$id;
+      }
+      
+      $page = $result->fetch();
+      
+      $sideTopAd = $this->getInnerAdInfo($page['Side_Top_Ad_Name']);
+      if(is_string($sideTopAd))
+      {
+          return $sideTopAd;
+      }
+      
+      $sideBtmAd = $this->getInnerAdInfo($page['Side_Btm_Ad_Name']);
+      if(is_string($sideBtmAd))
+      {
+          return $sideBtmAd;
+      }
+      
+      $slotOne = $this->getInnerAdInfo($page['Slot_1_Ad_Name']);
+      if(is_string($slotOne))
+      {
+          return $slotOne;
+      }
+      
+      $slotTwo = $this->getInnerAdInfo($page['Slot_2_Ad_Name']);
+      if(is_string($slotTwo))
+      {
+          return $slotTwo;
+      }
+      
+      $slotThree = $this->getInnerAdInfo($page['Slot_3_Ad_Name']);
+      if(is_string($slotThree))
+      {
+          return $slotThree;
+      }
+      
+      $slotFour = $this->getInnerAdInfo($page['Slot_4_Ad_Name']);
+      if(is_string($slotFour))
+      {
+          return $slotFour;
+      }
+      
+      $retAry= array(
+          'title'=>$page['title'],
+          'page_ID'=>$page['page_ID'],
+          'mainPic'=>$page['mainPic'],
+          'side_top_ad'=>$sideTopAd,
+          'side_btm_ad'=>$sideBtmAd,
+          'slotOne'=>$slotOne,
+          'slotTwo'=>$slotTwo,
+          'slotThree'=>$slotThree,
+          'slotFour'=>$slotFour,
+          'bottom_left_pic'=>$page['Bottom_Left_Ad_Name'],
+          'bottom_right_pic'=>$page['Bottom_Right_Ad_Name'],
+          'desc'=>$page['description']);
+      
+      return $retAry;
+       
+   }
+   
+   private function getInnerAdInfo($adName)
+   {
+       $db = new Database('Sals_Dollar','localhost','root','root','mysql');
+       
+       $sql='SELECT * FROM Inner_Page_Ad WHERE Inner_Page_Ad.ad_Name =:adName';
+       $result = $db->queryDb($sql,$adName,':adName');
+       
+       if(is_string($result))
+      {
+          return $result;
+      }
+      else if($result->rowCount() > 1)
+      {
+          return 'ERROR TO MANY ROWS RETURNED FROM '.$adName;
+      }
+      else if($result->rowCount() <= 0)
+      {
+          return 'ERROR NO ROWS RETURNED FROM'.$adName;
+      }
+      
+      $ad = $result->fetch();
+      
+      return $ad;
+       
+   }
 }

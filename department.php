@@ -1,25 +1,22 @@
 <?php
 include 'Display.php';
 $disp = new Display();
-        ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+$page=$_GET['id'];
+$info = $disp->getInnerPageInfo($page);
+?>
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
-        <meta charset="UTF-8"> 
-        <title>Sal's Dollar Store Montgomery Alabama</title>
+        <meta charset="UTF-8">
+        <title><?php echo $info['title']?></title>
         <link rel='stylesheet' href='css/main.css' type='text/css'/>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <link rel="stylesheet" href='scripts/lean-slider.css' type='text/css'/>
-        <script src='scripts/lean-slider.js'></script>
-        <script>
-            $(document).ready(function() {
-    $('#slider').leanSlider();
-});
-$(document).ready(function() {
-    $('#slider2').leanSlider();
-});
-        </script>
-        
+        <link rel='stylesheet' href='css/inner.css' type='text/css'/>
     </head>
     <body>
         <div id='topAdZone'>
@@ -34,8 +31,7 @@ $(document).ready(function() {
                 </div>
             </div>
             <div id='navZone'>
-                <?php echo $disp->displayNav(array(
-                    
+                 <?php echo $disp->displayNav(array(
                                                     array('Home','index.php'),
                                                     array
                                                         (
@@ -89,113 +85,106 @@ $(document).ready(function() {
         <div id='bodyWrapper'>
             
             <div id='bodyZone'>
-                
-                <div class='top'>
+                <div id="innerTopZone">
+                    <div id="mainPicDiv">
+                        <img src="<?php echo $info['mainPic'];?>">
+                    </div>
+                    <div id="sideTopDiv">
+                        <div id="topSide">
+                            <div id="topSideAdTitle">
+                                <?php echo $info['side_top_ad']['title']?>
+                            </div>
+                            <div id="topSideDesc">
+                                <?php echo $info['side_top_ad']['description']?>
+                            </div>
+                            <div id="topSideAdImg">
+                                <img src="<?php echo $info['side_top_ad']['img_Src']?>">
+                            </div>
+                            <div id="topSideAdLink">
+                                <a href="<?php echo $info['side_top_ad']['link_Target']?>">
+                                    <?php echo $info['side_top_ad']['link']?>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="btmSide">
+                            <div id="btmSideAdTitle">
+                              <?php echo $info['side_btm_ad']['title']?>  
+                            </div>
+                            <div id="btmSideAdDesc">
+                                <?php echo $info['side_btm_ad']['description']?> 
+                            </div>
+                            <div id="btmSideAdLink">
+                                <a href="<?php echo $info['side_btm_ad']['link_Target']?>">
+                                    <?php echo $info['side_btm_ad']['link']?>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div id='upperMessage'>
+                </div>
+                <div id="innerMidZone">
+                    <div id="descTitleDiv">
+                        <span id="descTitle"><?php echo $info['title']?></span>
+                    </div>
+                    <div id="descDiv">
+                        <span id="description"><?php echo $info['desc']?></span>
+                    </div>
+                </div>
+                <div id="innerBottomZone">
+                    <div id="bottomTopDiv">
+                        <div id="slot1AdHolder">
+                            <div class="slotImg">
+                               <img src="<?php echo $info['slotOne']['img_Src']?>">
+                            </div>
+                            <div class="slotLink">
+                                <a href="<?php echo $info['slotOne']['link_Target']?>">
+                                    <?php echo $info['slotOne']['link']?>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="slot2AdHolder">
+                            <div class="slotImg">
+                               <img src="<?php echo $info['slotTwo']['img_Src']?>">
+                            </div>
+                            <div class="slotLink">
+                                <a href="<?php echo $info['slotTwo']['link_Target']?>">
+                                    <?php echo $info['slotTwo']['link']?>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="slot3AdHolder">
+                            <div class="slotImg">
+                               <img src="<?php echo $info['slotThree']['img_Src']?>">
+                            </div>
+                            <div class="slotLink">
+                                <a href="<?php echo $info['slotThree']['link_Target']?>">
+                                    <?php echo $info['slotThree']['link']?>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="slot4AdHolder">
+                            <div class="slotImg">
+                               <img src="<?php echo $info['slotFour']['img_Src']?>">
+                            </div>
+                            <div class="slotLink">
+                                <a href="<?php echo $info['slotFour']['link_Target']?>">
+                                    <?php echo $info['slotFour']['link']?>
+                                </a>
+                            </div>
+                        </div>
                         
-                        <div id='topLeftMsg' class='left'>
-                            <?php echo $disp->fillContentMessageZones('topLeftMsg'); ?>
-                        </div>
-                        <div id='topRightMsg' class='right'>
-                            <?php echo $disp->fillContentMessageZones('topRightMsg'); ?>
-                        </div>
                     </div>
-                </div>
-                <div class='middleTop'>
-                        
-                        <div id='sliderDiv'>
-                            <iframe src="https://player.vimeo.com/video/46781473?autoplay=1&title=0&byline=0&portrait=0" width="470" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>                              
-                            </iframe>
+                    <div id="bottomBottomDiv">
+                        <div id="bbLeftDiv">
+                            <img src="<?php echo $info['bottom_left_pic']?>">
                         </div>
-                        <div id='midTopMsg' class='right'>
-                            <?php echo $disp->fillContentAdZones('midTopMsg'); ?>
-                            
+                        <div id="bbRightDiv">
+                            <img src="<?php echo $info['bottom_right_pic']?>">
                         </div>
-                        <div id='midBtmMsg' class='right'>
-                             <?php echo $disp->fillContentAdZones('midBtmMsg'); ?>
-                        </div>
-                </div>
-                <div class='middleBtm'>
-                        <div class='midleftThird'>
-                            <div class='InnerTop'>
-                                 <?php $options['style']=2; echo $disp->fillContentAdZones('innerTopMsg',$options); ?>
-                            </div>
-                            <div class='InnerBottom'>
-                                 <?php $options['style']=2; echo $disp->fillContentAdZones('innerBtmMsg',$options); ?>
-                            </div>
-                        </div>
-                        <div class='midThird'>
-                            <div id='slider'>
-                                <div id='slide1'>
-                                   <?php $options['style']=1; echo $disp->fillContentAdZones('slide1',$options); ?> 
-                                </div>
-                                <div id='slide2'>
-                                    <?php $options['style']=1; echo $disp->fillContentAdZones('slide2',$options); ?>
-                                </div>
-                                <div id='slide3'>
-                                    <?php $options['style']=1; echo $disp->fillContentAdZones('slide3',$options); ?>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class='rightThird'>
-                             <?php $options['style']=1; echo $disp->fillContentAdZones('rightThirdMsg',$options); ?>
-                        </div>
-                </div>
-                <div id="sliderBtm">
-                    <div id="slider2">
-                        <div id="btmSlide1">
-                            <div id="inslide1">
-                                <?php echo $disp->fillBtmSliderZones('inslide1'); ?>
-                            </div>
-                            <div id="inslide2">
-                                <?php echo $disp->fillBtmSliderZones('inslide2'); ?>
-                            </div>
-                            <div id="inslide3">
-                                <?php echo $disp->fillBtmSliderZones('inslide3'); ?>
-                            </div>
-                            <div id="inslide4">
-                                <?php echo $disp->fillBtmSliderZones('inslide4'); ?>
-                            </div>
-                            <div id="inslide5">
-                                <?php echo $disp->fillBtmSliderZones('inslide5'); ?>
-                            </div>
-                        </div>
-                        <div id="btmSlide2">
-                            <div id="inslide6">
-                                <?php echo $disp->fillBtmSliderZones('inslide6'); ?>
-                            </div>
-                            <div id="inslide7">
-                                <?php echo $disp->fillBtmSliderZones('inslide7'); ?>
-                            </div>
-                            <div id="inslide8">
-                                <?php echo $disp->fillBtmSliderZones('inslide8'); ?>
-                            </div>
-                            <div id="inslide9">
-                                <?php echo $disp->fillBtmSliderZones('inslide9'); ?>
-                            </div>
-                            <div id="inslide10">
-                                <?php echo $disp->fillBtmSliderZones('inslide10'); ?>
-                            </div>
-                        </div>
-                    </div>    
-                </div>
-                <div class='bottom'>
-                    <div class="leftThird">
-                        <img/>
-                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmLeftThirdMsg',$option); ?>
-                    </div>
-                    <div class="midThird">
-                        <img/>
-                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmMidThirdMsg',$option); ?>
-                    </div>
-                    <div class="rightThird">
-                        <img/>
-                        <?php $option['style']=1; echo $disp->fillContentAdZones('btmRightThirdMsg',$option); ?>
                     </div>
                 </div>
             </div>
+                    
         </div>
         <div id='footer'>
             <div id='hours'>
@@ -234,6 +223,5 @@ $(document).ready(function() {
                 </div>
             </div>
         </div>
-        
     </body>
 </html>

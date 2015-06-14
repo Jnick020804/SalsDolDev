@@ -1,0 +1,176 @@
+#innerTopZone{
+    width:100%;
+    height:400px;
+
+}
+
+#innerMidZone{
+    width:100%;
+    height:450px;
+}
+
+#innerBottomZone{
+    width:100%;
+    height:500px;
+}
+
+#mainPicDiv{
+    width:70%;
+    height:100%;
+    float:left;
+}
+
+#mainPicDiv img{
+    height:100%;
+    width:100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#sideTopDiv{
+    width:30%;
+    height:100%;
+    float:right;
+}
+
+#topSide{
+    height:69%;
+    width:100%;
+    border-bottom:1px solid black;
+}
+
+#btmSide{
+    height:30%;
+    width:100%;
+}
+
+#descTitleDiv{
+    height:10%;
+    width:100%;
+    margin-top:20px;
+}
+
+#descDiv{
+    height:90%;
+    width:100%;
+    font-weight:400;
+    font-size:20px;
+}
+
+#bottomTopDiv,#bottomBottomDiv{
+    height:50%;
+    width:100%;
+}
+
+#slot1AdHolder,#slot2AdHolder,#slot3AdHolder,#slot4AdHolder{
+    width:25%;
+    height:100%;
+    float:left;
+}
+
+#bbLeftDiv{
+    width:50%;
+    height:100%;
+    float:left;
+}
+
+#bbLeftDiv img,#bbRightDiv img
+{
+    height:100%;
+    width:98%;
+    display:block;
+    margin:0 auto;
+    max-width:100%;
+    max-height:100%;
+    
+}
+
+#bbRightDiv{
+    width:50%;
+    height:100%;
+    float:right;
+}
+
+#topSideAdTitle{
+    height:10%;
+    width:100%;
+
+}
+
+#topSideDesc{
+    height:10%;
+    width:100%;
+
+}
+
+#topSideAdImg{
+    height:65%;
+    width:100%;
+
+}
+
+#topSideAdImg img{
+    max-height: 100%;
+    max-width:100%;
+    height: 100%;
+    width:100%;
+    
+
+}
+
+#topSideAdLink{
+    height:15%;
+    width:100%;
+
+}
+
+.slotImg{
+    height:80%;
+    width:100%;
+}
+
+.slotImg img{
+    height:100%;
+    width:90%;
+    max-height:100%;
+    max-width:100%;
+    display:block;
+    margin:0 auto;
+}
+
+.slotLink{
+    height:20%;
+    width:100%;
+}
+
+#topSideAdTitle, #btmSideAdTitle, #descTitleDiv{
+    color:#B8021A;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size:25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#topSideDesc,#btmSideAdDesc{
+    color:#000000;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size:20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#topSideAdLink,#btmSideAdLink,.slotLink{
+    vertical-align: middle;
+    text-decoration: none;
+    font-size:23px;
+    font-weight: 600;
+    text-align: center;
+    margin-top:5px;
+}
+
+#topSideAdLink a,#btmSideAdLink a,.slotLink a{
+   color:#B8021A;
+   text-decoration: none;
+}
