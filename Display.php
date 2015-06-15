@@ -25,10 +25,13 @@ class Display {
        for($i = 0;$i < count($navItems);$i++)
        {
            
-           $output.="<a class='navLink' href='".$navItems[$i][1]."'><div class='navDiv'>".$navItems[$i][0]."</div></a>";
+           
            if(isset($navItems[$i][2])&&$navItems[$i][2]=1 && isset($navItems[$i][3]))
            {
-               $output="<div id='nav'><div class='navButton' onClick='".$navItems[$i][3]."'>".$navItems[$i][0]."</div>";
+               $output.="<div class='navButton' onClick='".$navItems[$i][3]."'>".$navItems[$i][0]."</div>";
+           }
+           else{
+               $output.="<a class='navLink' href='".$navItems[$i][1]."'><div class='navDiv'>".$navItems[$i][0]."</div></a>";
            }
        }
        
@@ -45,6 +48,17 @@ class Display {
            $output.="<div id='".$menuItems[$i][2]."' onclick='".$menuItems[$i][1]."' class='menuItem'>";
                 $output.="<span class='menuItemText'>".$menuItems[$i][0]."</span>";
            $output.="</div>";
+           if(isset($menuItems[$i][3]))
+           {
+               $output.="<div id='in".$menuItems[$i][2]."'>";
+                    for($j=0; $j < 6;$j++)
+                    {
+                        $output.="<div id='".$menuItems[$i][3][$j]['ad_Name']."' onclick='showInnEdit(this.id)'>";
+                            $output.=$menuItems[$i][3][$j]['ad_Name'];
+                        $output.="</div>";
+                    }
+               $output.="</div>";
+           }
        }
        $output.="</div>";
        
@@ -370,4 +384,5 @@ class Display {
       return $ad;
        
    }
+   
 }

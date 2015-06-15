@@ -2,6 +2,14 @@
 session_start();
 include 'Display.php';
 $disp = new Display();
+$hh = $disp->getInnerPageInfo('household');
+$ptry = $disp->getInnerPageInfo('pantry');
+$prtySup = $disp->getInnerPageInfo('party_supply');
+$hlBty = $disp->getInnerPageInfo('hlth_beauty');
+$offSch = $disp->getInnerPageInfo('offc_sch');
+$tyCrfts = $disp->getInnerPageInfo('toy_crfts');
+$ssnHldy = $disp->getInnerPageInfo('ssnl_hldy');
+$apprl = $disp->getInnerPageInfo('apprl');
 header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -39,6 +47,12 @@ and open the template in the editor.
                                                             'http://www.google.com',
                                                             1,
                                                             'editZones()'
+                                                        ),
+                                                        array(
+                                                            'Edit Pages',
+                                                            'http://www.google.com',
+                                                            1,
+                                                            'editInPage()'
                                                         ),
                                                         array(
                                                             
@@ -167,14 +181,48 @@ and open the template in the editor.
                     array('Bottom Mid Zone','showEditWindow(this.id)','btmMidThirdMsg'),
                     array('Bottom Right Zone','showEditWindow(this.id)','btmRightThirdMsg'))); ?>
         </div>
+        <div id="inpageAdNav">
+            <?php echo $disp->displayMenu(array(
+                    array('Household','showSubList(this.id)','houseHoldDiv',
+                        array($hh['side_top_ad'],
+                              $hh['side_btm_ad'],
+                              $hh['slotOne'],
+                              $hh['slotTwo'],
+                              $hh['slotThree'],
+                              $hh['slotFour'],
+                              array('mainImg'=>$hh['mainPic']),
+                              array('BottomLeft'=>$hh['bottom_left_pic']),
+                              array('BottomRight'=>$hh['bottom_right_pic'])))
+            ));?>
+        </div>
         <script>
         function editZones()
         {
-            if(document.getElementById('welcomeText').style.display==='block')
+            if(document.getElementById('welcomeText').style.display==='block' ||document.getElementById('inpageAdNav').style.display==='block' )
             {
                 document.getElementById('welcomeText').style.display='none';
                 document.getElementById('adNav').style.display='block';
                 document.getElementById('zoneKey').style.display='block';
+                document.getElementById('inpageAdNav').style.display='none';
+                //document.getElementById('inpageAdKey').style.display='none';
+            }
+            else
+            {
+                document.getElementById('welcomeText').style.display='block';
+                document.getElementById('adNav').style.display='none';
+                document.getElementById('zoneKey').style.display='none';
+            }
+        }
+        
+        function editInPage()
+        {
+            if(document.getElementById('welcomeText').style.display==='block' ||document.getElementById('adNav').style.display==='block' )
+            {
+                document.getElementById('welcomeText').style.display='none';
+                document.getElementById('adNav').style.display='none';
+                document.getElementById('zoneKey').style.display='none';
+                document.getElementById('inpageAdNav').style.display='block';
+                //document.getElementById('inpageAdKey').style.display='block';
             }
             else
             {

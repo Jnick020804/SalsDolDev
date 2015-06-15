@@ -478,7 +478,7 @@ margin:5px 0;
     padding-top:10px;
 }
 
-#adNav{
+#adNav,#inpageAdNav{
     width:21%;
     height: 100%;
     display:none;
