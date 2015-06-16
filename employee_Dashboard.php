@@ -30,7 +30,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link rel='stylesheet' href='css/main.css' type='text/css'/>
-        <link rel='stylesheet' href='css/adZoneKey.css' tyep='text/css'>
+        <link rel='stylesheet' href='css/adZoneKey.css' tyep='text/css'>    
         <title>Welcome to the Employee Dashboard</title>
     </head>
     <body>
@@ -72,6 +72,28 @@ and open the template in the editor.
                         a menu will appear. Select the Ad Zone that you would like to edit and then
                         select the content that you would like to display in it. Make sure you pay
                         attention to any constraints such as max picture size and text length.
+                        <br/>
+                        <br/>
+                        To Edit a picture click on the ad zone you would like to edit then click
+                        the browse button under the picture. When you do a window will pop up that
+                        contains all the images on the server. Just click the image you would like to
+                        add. When you see a message pop up saying the image was changed click ok then exit
+                        out of the picture window.
+                        <br/>
+                        <br/>
+                        To Upload an image to the server click on any add zone and click browse under the
+                        picture. A window will pop up with all of the images on the sever. Under those images
+                        Click the browse button again. Select the image you want to upload then press ok.
+                        Click the upload button. A message will appear saying the upload completed and the window
+                        will automatically close. The image is now on the server and will be available for use
+                        <br/>
+                        <br/>
+                        To edit any non-image field in an add zone just type the text in the appropriate text box
+                        and click submit.<strong>NOTE: the LINK TARGET is where you want the link to go. the LINK is what 
+                        you want the link to say</strong>
+                        
+                        
+                       
                     </p>
                 </div>
                 <div id="zoneKey">
@@ -153,6 +175,55 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
+                <div id="innerPageKey">
+                    <div id="innerTopZone">
+                    <div id="mainPicDiv">
+                        <span class="adText1">Main Picture Zone (mainPic)</span>
+                    </div>
+                    <div id="sideTopDiv">
+                        <div id="topSide">
+                            <span class="adText1">Top Side Top Zone (_TST_AD)</span>
+                        </div>
+                        <div id="btmSide">
+                             <span class="adText1">Top Side Bottom Zone (_TSB_AD)</span>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div id="innerMidZone">
+                        <div id="descTitleDiv">
+                            <span class="adText1">Bottom Right Zone (title)</span>
+                        </div>
+                        <div id="descDiv">
+                            <span class="adText1">Description Zone (Desc)</span>
+                        </div>
+                    </div>
+                    <div id="innerBottomZone">
+                        <div id="bottomTopDiv">
+                            <div id="slot1AdHolder">
+                                <span class="adText1">Slot 1 Zone (_S1_AD)</span>
+                            </div>
+                            <div id="slot2AdHolder">
+                                <span class="adText1">Slot 2 Zone (_S2_AD)</span>
+                            </div>
+                            <div id="slot3AdHolder">
+                                <span class="adText1">Slot 3 Zone (_S3_AD)</span>
+                            </div>
+                            <div id="slot4AdHolder">
+                              <span class="adText1">Slot 4 Zone (_S4_AD)</span>
+                            </div>
+                        </div>
+                        <div id="bottomBottomDiv">
+                            <div id="bbLeftDiv">
+                               <span class="adText1">Bottom Left Zone (_btm_lft_AD)</span>
+
+                            </div>
+                            <div id="bbRightDiv">
+                                <span class="adText1">Bottom Right Zone (_btm_rght_AD)</span>
+                            </div>
+                        </div>  
+                    </div>
+                </div>     
             </div>
         </div>
         <div id="adNav">
@@ -273,142 +344,7 @@ and open the template in the editor.
                                   array('BottomRight'=>$apprl['bottom_right_pic'],'zone'=>'A'))),               
             ));?>
         </div>
-        <script>
-        function editZones()
-        {
-            if(document.getElementById('welcomeText').style.display==='block' ||document.getElementById('inpageAdNav').style.display==='block' )
-            {
-                document.getElementById('welcomeText').style.display='none';
-                document.getElementById('adNav').style.display='block';
-                document.getElementById('zoneKey').style.display='block';
-                document.getElementById('inpageAdNav').style.display='none';
-                //document.getElementById('inpageAdKey').style.display='none';
-            }
-            else
-            {
-                document.getElementById('welcomeText').style.display='block';
-                document.getElementById('adNav').style.display='none';
-                document.getElementById('zoneKey').style.display='none';
-            }
-        }
-        
-        function editInPage()
-        {
-            if(document.getElementById('welcomeText').style.display==='block' ||document.getElementById('adNav').style.display==='block' )
-            {
-                document.getElementById('welcomeText').style.display='none';
-                document.getElementById('adNav').style.display='none';
-                document.getElementById('zoneKey').style.display='none';
-                document.getElementById('inpageAdNav').style.display='block';
-                //document.getElementById('inpageAdKey').style.display='block';
-            }
-            else
-            {
-                document.getElementById('welcomeText').style.display='block';
-                document.getElementById('adNav').style.display='none';
-                document.getElementById('zoneKey').style.display='none';
-            }
-        }
-        
-        function showEditWindow(id)
-        {
-            window.open('zoneEditWindow.php?id='+id,'','width=500,height=500');
-        }
-        
-        function showSubList(id)
-        {
-            switch(id)
-            {
-                case'houseHoldDiv':
-                document.getElementById('inhouseHoldDiv').style.display='block';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'pantryDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='block';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'partyDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='block'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'healthDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='block';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'schDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='block';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'toyDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='block';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'seasDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='block';
-                document.getElementById('inapprlDiv').style.display='none';
-                break;
-                
-                case'apprlDiv':
-                document.getElementById('inhouseHoldDiv').style.display='none';
-                document.getElementById('inpantryDiv').style.display='none';
-                document.getElementById('inpartyDiv').style.display='none'; 
-                document.getElementById('inhealthDiv').style.display='none';
-                document.getElementById('inschDiv').style.display='none';
-                document.getElementById('intoyDiv').style.display='none';
-                document.getElementById('inseasDiv').style.display='none';
-                document.getElementById('inapprlDiv').style.display='block';
-                break;
-            }
-        }
-    </script>
+     <script src="scripts/dashboard.js"></script> 
     </body>
     
 </html>

@@ -132,3 +132,93 @@
     width:33%;
     float:right;
 }
+
+/*********************inner css***************************************/
+#innerPageKey{
+    display:none;
+}
+#innerTopZone{
+    width:100%;
+    height:250px;
+    border:1px solid black;
+
+}
+
+#innerMidZone{
+    width:100%;
+    height:300px;
+    border:1px solid black;
+}
+
+#innerBottomZone{
+    width:100%;
+    height:350px;
+    border:1px solid black;
+}
+
+#mainPicDiv{
+    width:69%;
+    height:100%;
+    float:left;
+    border-right:1px solid black;
+    
+}
+
+
+#sideTopDiv{
+    width:30%;
+    height:100%;
+    float:right;
+}
+
+#topSide{
+    height:69%;
+    width:100%;
+    border-bottom:1px solid black;
+}
+
+#btmSide{
+    height:30%;
+    width:100%;
+}
+
+#descTitleDiv{
+    height:10%;
+    width:100%;
+    margin-top:20px;
+}
+
+#descDiv{
+    height:90%;
+    width:100%;
+    font-weight:400;
+    font-size:20px;
+}
+
+#bottomTopDiv,#bottomBottomDiv{
+    height:50%;
+    width:100%;
+}
+
+#slot1AdHolder,#slot2AdHolder,#slot3AdHolder,#slot4AdHolder{
+    width:24.8%;
+    height:100%;
+    float:left;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+}
+
+#bbLeftDiv{
+    width:49%;
+    height:100%;
+    float:left;
+    border-right:1px solid black;
+}
+
+
+
+#bbRightDiv{
+    width:50%;
+    height:100%;
+    float:right;
+}
