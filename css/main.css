@@ -515,7 +515,15 @@ margin:5px 0;
 .menuItem{
     font-size:18px;
     font-weight:600;
+    width:100%;
+    height:40.5px;
+    text-align: center;
+    border-top: 1px solid #8B0000;
+    border-bottom:1px solid #8B0000;
+    clear:left;
 }
+
+
 
 #adZoneMenu #topLeftMsg:hover,#adZoneMenu #topRightMsg:hover,
 #adZoneMenu #midTopMsg:hover, #adZoneMenu #midBtmMsg:hover,
@@ -527,6 +535,31 @@ margin:5px 0;
 #adZoneMenu #inslide7:hover, #adZoneMenu #inslide8:hover,
 #adZoneMenu #inslide9:hover, #adZoneMenu #inslide10:hover,
 #adZoneMenu #btmLeftThirdMsg:hover, #adZoneMenu #btmRightThirdMsg:hover,
-#adZoneMenu #btmMidThirdMsg:hover{
+#adZoneMenu #btmMidThirdMsg:hover,.menuItem:hover{
     background-color:#800011;
 }
+
+#inhouseHoldDiv,#inpantryDiv,#inpartyDiv,#inhealthDiv
+,#inschDiv,#inseasDiv,#intoyDiv,#inapprlDiv{
+    display:none;
+    background-color:#E0CE91;
+}
+
+#inhouseHoldDiv div,#inpantryDiv div,#inpartyDiv div,#inhealthDiv div
+,#inschDiv div,#inseasDiv div,#intoyDiv div,#inapprlDiv div{
+    color:#000000;
+    height:40px;
+    width:100%;
+    border-top:1px solid #B5A267;
+    border-bottom:1px solid #B5A267;
+    text-align:center;
+    font-size:18px;
+    font-weight:500;
+}
+
+#inhouseHoldDiv div:hover,#inpantryDiv div:hover,#inpartyDiv div:hover,#inhealthDiv div:hover
+,#inschDiv div:hover,#inseasDiv div:hover,#intoyDiv div:hover,#inapprlDiv div:hover{
+    background-color:#B5A267;
+}
+
+

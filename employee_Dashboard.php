@@ -190,9 +190,87 @@ and open the template in the editor.
                               $hh['slotTwo'],
                               $hh['slotThree'],
                               $hh['slotFour'],
-                              array('mainImg'=>$hh['mainPic']),
-                              array('BottomLeft'=>$hh['bottom_left_pic']),
-                              array('BottomRight'=>$hh['bottom_right_pic'])))
+                              array('mainImg'=>$hh['mainPic'],'zone'=>'HH'),
+                              array('BottomLeft'=>$hh['bottom_left_pic'],'zone'=>'HH'),
+                              array('BottomRight'=>$hh['bottom_right_pic'],'zone'=>'HH'))),
+                
+                        array('Pantry','showSubList(this.id)','pantryDiv',
+                            array($ptry['side_top_ad'],
+                                  $ptry['side_btm_ad'],
+                                  $ptry['slotOne'],
+                                  $ptry['slotTwo'],
+                                  $ptry['slotThree'],
+                                  $ptry['slotFour'],
+                                  array('mainImg'=>$ptry['mainPic'],'zone'=>'P'),
+                                  array('BottomLeft'=>$ptry['bottom_left_pic'],'zone'=>'P'),
+                                  array('BottomRight'=>$ptry['bottom_right_pic'],'zone'=>'P'))),
+       
+                
+                        array('Party Supplies','showSubList(this.id)','partyDiv',
+                            array($prtySup['side_top_ad'],
+                                  $prtySup['side_btm_ad'],
+                                  $prtySup['slotOne'],
+                                  $prtySup['slotTwo'],
+                                  $prtySup['slotThree'],
+                                  $prtySup['slotFour'],
+                                  array('mainImg'=>$prtySup['mainPic'],'zone'=>'PS'),
+                                  array('BottomLeft'=>$prtySup['bottom_left_pic'],'zone'=>'PS'),
+                                  array('BottomRight'=>$prtySup['bottom_right_pic'],'zone'=>'PS'))),
+                   
+                        array('Health & Beauty','showSubList(this.id)','healthDiv',
+                            array($hlBty['side_top_ad'],
+                                  $hlBty['side_btm_ad'],
+                                  $hlBty['slotOne'],
+                                  $hlBty['slotTwo'],
+                                  $hlBty['slotThree'],
+                                  $hlBty['slotFour'],
+                                  array('mainImg'=>$hlBty['mainPic'],'zone'=>'HB'),
+                                  array('BottomLeft'=>$hlBty['bottom_left_pic'],'zone'=>'HB'),
+                                  array('BottomRight'=>$hlBty['bottom_right_pic'],'zone'=>'HB'))),
+                   
+                        array('Office & School','showSubList(this.id)','schDiv',
+                            array($offSch['side_top_ad'],
+                                  $offSch['side_btm_ad'],
+                                  $offSch['slotOne'],
+                                  $offSch['slotTwo'],
+                                  $offSch['slotThree'],
+                                  $offSch['slotFour'],
+                                  array('mainImg'=>$offSch['mainPic'],'zone'=>'OS'),
+                                  array('BottomLeft'=>$offSch['bottom_left_pic'],'zone'=>'OS'),
+                                  array('BottomRight'=>$offSch['bottom_right_pic'],'zone'=>'OS'))),
+                    
+                        array('Toys & Crafts','showSubList(this.id)','toyDiv',
+                            array($tyCrfts['side_top_ad'],
+                                  $tyCrfts['side_btm_ad'],
+                                  $tyCrfts['slotOne'],
+                                  $tyCrfts['slotTwo'],
+                                  $tyCrfts['slotThree'],
+                                  $tyCrfts['slotFour'],
+                                  array('mainImg'=>$tyCrfts['mainPic'],'zone'=>'TC'),
+                                  array('BottomLeft'=>$tyCrfts['bottom_left_pic'],'zone'=>'TC'),
+                                  array('BottomRight'=>$tyCrfts['bottom_right_pic'],'zone'=>'TC'))),
+                    
+                        array('Seasonal & Holiday','showSubList(this.id)','seasDiv',
+                            array($ssnHldy['side_top_ad'],
+                                  $ssnHldy['side_btm_ad'],
+                                  $ssnHldy['slotOne'],
+                                  $ssnHldy['slotTwo'],
+                                  $ssnHldy['slotThree'],
+                                  $ssnHldy['slotFour'],
+                                  array('mainImg'=>$ssnHldy['mainPic'],'zone'=>'SH'),
+                                  array('BottomLeft'=>$ssnHldy['bottom_left_pic'],'zone'=>'SH'),
+                                  array('BottomRight'=>$ssnHldy['bottom_right_pic'],'zone'=>'SH'))),
+                    
+                        array('Apparel','showSubList(this.id)','apprlDiv',
+                            array($apprl['side_top_ad'],
+                                  $apprl['side_btm_ad'],
+                                  $apprl['slotOne'],
+                                  $apprl['slotTwo'],
+                                  $apprl['slotThree'],
+                                  $apprl['slotFour'],
+                                  array('mainImg'=>$apprl['mainPic'],'zone'=>'A'),
+                                  array('BottomLeft'=>$apprl['bottom_left_pic'],'zone'=>'A'),
+                                  array('BottomRight'=>$apprl['bottom_right_pic'],'zone'=>'A'))),               
             ));?>
         </div>
         <script>
@@ -235,6 +313,100 @@ and open the template in the editor.
         function showEditWindow(id)
         {
             window.open('zoneEditWindow.php?id='+id,'','width=500,height=500');
+        }
+        
+        function showSubList(id)
+        {
+            switch(id)
+            {
+                case'houseHoldDiv':
+                document.getElementById('inhouseHoldDiv').style.display='block';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'pantryDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='block';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'partyDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='block'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'healthDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='block';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'schDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='block';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'toyDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='block';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'seasDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='block';
+                document.getElementById('inapprlDiv').style.display='none';
+                break;
+                
+                case'apprlDiv':
+                document.getElementById('inhouseHoldDiv').style.display='none';
+                document.getElementById('inpantryDiv').style.display='none';
+                document.getElementById('inpartyDiv').style.display='none'; 
+                document.getElementById('inhealthDiv').style.display='none';
+                document.getElementById('inschDiv').style.display='none';
+                document.getElementById('intoyDiv').style.display='none';
+                document.getElementById('inseasDiv').style.display='none';
+                document.getElementById('inapprlDiv').style.display='block';
+                break;
+            }
         }
     </script>
     </body>

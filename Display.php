@@ -57,6 +57,16 @@ class Display {
                             $output.=$menuItems[$i][3][$j]['ad_Name'];
                         $output.="</div>";
                     }
+                    
+                    $output.='<div id="main_pic_'.$menuItems[$i][3][6]['zone'].'">';
+                    $output.=$menuItems[$i][3][6]['zone'].'_Main_Pic';
+                    $output.='</div>';
+                    $output.='<div id="btm_lft'.$menuItems[$i][3][7]['zone'].'">';
+                    $output.=$menuItems[$i][3][7]['zone'].'_btm_lft';
+                    $output.='</div>';
+                    $output.='<div id="btm_rght'.$menuItems[$i][3][8]['zone'].'">';
+                    $output.=$menuItems[$i][3][8]['zone'].'_btm_rght';
+                    $output.='</div>'; 
                $output.="</div>";
            }
        }
