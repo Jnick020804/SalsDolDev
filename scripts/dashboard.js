@@ -134,4 +134,37 @@ function editZones()
                 break;
             }
         }
+function showInnEdit(id)
+{
+    var page = id.substring(0,id.indexOf('_'));
+    var tail = id.substring(id.indexOf('_')+1,id.length);
+    if(id.indexOf('AD')===-1)
+    {
+        switch(tail)
+        {
+            case'MAIN_PIC':
+                window.open('pictureEditBox.php?id='+page+'&zone='+tail,'','width=500,height=500');
+                break;
+            case'BTM_LFT':
+                window.open('pictureEditBox.php?id='+page+'&zone='+tail,'','width=500,height=500');
+                break;
+            case'BTM_RGHT':
+                window.open('pictureEditBox.php?id='+page+'&zone='+tail,'','width=500,height=500');
+                break;
+            case'TITLE':
+                //text edit box
+                break;
+            case'DESC':
+                //description edit box
+                break;
+        }
+    }
+    else
+    {
+        switch(id)
+        {
 
+        }
+    }
+    
+}

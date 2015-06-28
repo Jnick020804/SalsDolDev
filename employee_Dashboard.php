@@ -261,9 +261,11 @@ and open the template in the editor.
                               $hh['slotTwo'],
                               $hh['slotThree'],
                               $hh['slotFour'],
-                              array('mainImg'=>$hh['mainPic'],'zone'=>'HH'),
+                              array('MainImg'=>$hh['mainPic'],'zone'=>'HH'),
                               array('BottomLeft'=>$hh['bottom_left_pic'],'zone'=>'HH'),
-                              array('BottomRight'=>$hh['bottom_right_pic'],'zone'=>'HH'))),
+                              array('BottomRight'=>$hh['bottom_right_pic'],'zone'=>'HH'),
+                              array('Title'=>$hh['title'],'zone'=>'HH'),
+                              array('Descr'=>$hh['desc'],'zone'=>'HH'))),
                 
                         array('Pantry','showSubList(this.id)','pantryDiv',
                             array($ptry['side_top_ad'],
@@ -274,7 +276,9 @@ and open the template in the editor.
                                   $ptry['slotFour'],
                                   array('mainImg'=>$ptry['mainPic'],'zone'=>'P'),
                                   array('BottomLeft'=>$ptry['bottom_left_pic'],'zone'=>'P'),
-                                  array('BottomRight'=>$ptry['bottom_right_pic'],'zone'=>'P'))),
+                                  array('BottomRight'=>$ptry['bottom_right_pic'],'zone'=>'P'),
+                                  array('Title'=>$ptry['title'],'zone'=>'P'),
+                                  array('Descr'=>$ptry['desc'],'zone'=>'P'))),
        
                 
                         array('Party Supplies','showSubList(this.id)','partyDiv',
@@ -286,7 +290,9 @@ and open the template in the editor.
                                   $prtySup['slotFour'],
                                   array('mainImg'=>$prtySup['mainPic'],'zone'=>'PS'),
                                   array('BottomLeft'=>$prtySup['bottom_left_pic'],'zone'=>'PS'),
-                                  array('BottomRight'=>$prtySup['bottom_right_pic'],'zone'=>'PS'))),
+                                  array('BottomRight'=>$prtySup['bottom_right_pic'],'zone'=>'PS'),
+                                  array('Title'=>$prtySup['title'],'zone'=>'PS'),
+                                  array('Descr'=>$prtySup['desc'],'zone'=>'PS'))),
                    
                         array('Health & Beauty','showSubList(this.id)','healthDiv',
                             array($hlBty['side_top_ad'],
@@ -297,7 +303,9 @@ and open the template in the editor.
                                   $hlBty['slotFour'],
                                   array('mainImg'=>$hlBty['mainPic'],'zone'=>'HB'),
                                   array('BottomLeft'=>$hlBty['bottom_left_pic'],'zone'=>'HB'),
-                                  array('BottomRight'=>$hlBty['bottom_right_pic'],'zone'=>'HB'))),
+                                  array('BottomRight'=>$hlBty['bottom_right_pic'],'zone'=>'HB'),
+                                  array('Title'=>$hlBty['title'],'zone'=>'HB'),
+                                  array('Descr'=>$hlBty['desc'],'zone'=>'HB'))),
                    
                         array('Office & School','showSubList(this.id)','schDiv',
                             array($offSch['side_top_ad'],
@@ -308,7 +316,9 @@ and open the template in the editor.
                                   $offSch['slotFour'],
                                   array('mainImg'=>$offSch['mainPic'],'zone'=>'OS'),
                                   array('BottomLeft'=>$offSch['bottom_left_pic'],'zone'=>'OS'),
-                                  array('BottomRight'=>$offSch['bottom_right_pic'],'zone'=>'OS'))),
+                                  array('BottomRight'=>$offSch['bottom_right_pic'],'zone'=>'OS'),
+                                  array('Title'=>$offSch['title'],'zone'=>'OS'),
+                                  array('Descr'=>$offSch['desc'],'zone'=>'OS'))),
                     
                         array('Toys & Crafts','showSubList(this.id)','toyDiv',
                             array($tyCrfts['side_top_ad'],
@@ -319,7 +329,9 @@ and open the template in the editor.
                                   $tyCrfts['slotFour'],
                                   array('mainImg'=>$tyCrfts['mainPic'],'zone'=>'TC'),
                                   array('BottomLeft'=>$tyCrfts['bottom_left_pic'],'zone'=>'TC'),
-                                  array('BottomRight'=>$tyCrfts['bottom_right_pic'],'zone'=>'TC'))),
+                                  array('BottomRight'=>$tyCrfts['bottom_right_pic'],'zone'=>'TC'),
+                                  array('Title'=>$tyCrfts['title'],'zone'=>'TC'),
+                                  array('Descr'=>$tyCrfts['desc'],'zone'=>'TC'))),
                     
                         array('Seasonal & Holiday','showSubList(this.id)','seasDiv',
                             array($ssnHldy['side_top_ad'],
@@ -330,7 +342,9 @@ and open the template in the editor.
                                   $ssnHldy['slotFour'],
                                   array('mainImg'=>$ssnHldy['mainPic'],'zone'=>'SH'),
                                   array('BottomLeft'=>$ssnHldy['bottom_left_pic'],'zone'=>'SH'),
-                                  array('BottomRight'=>$ssnHldy['bottom_right_pic'],'zone'=>'SH'))),
+                                  array('BottomRight'=>$ssnHldy['bottom_right_pic'],'zone'=>'SH'),
+                                  array('Title'=>$ssnHldy['title'],'zone'=>'SH'),
+                                  array('Descr'=>$ssnHldy['desc'],'zone'=>'SH'))),
                     
                         array('Apparel','showSubList(this.id)','apprlDiv',
                             array($apprl['side_top_ad'],
@@ -341,7 +355,9 @@ and open the template in the editor.
                                   $apprl['slotFour'],
                                   array('mainImg'=>$apprl['mainPic'],'zone'=>'A'),
                                   array('BottomLeft'=>$apprl['bottom_left_pic'],'zone'=>'A'),
-                                  array('BottomRight'=>$apprl['bottom_right_pic'],'zone'=>'A'))),               
+                                  array('BottomRight'=>$apprl['bottom_right_pic'],'zone'=>'A'),
+                                  array('Title'=>$apprl['title'],'zone'=>'A'),
+                                  array('Descr'=>$apprl['desc'],'zone'=>'A')))               
             ));?>
         </div>
      <script src="scripts/dashboard.js"></script> 

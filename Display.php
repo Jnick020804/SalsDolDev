@@ -58,15 +58,21 @@ class Display {
                         $output.="</div>";
                     }
                     
-                    $output.='<div id="main_pic_'.$menuItems[$i][3][6]['zone'].'">';
-                    $output.=$menuItems[$i][3][6]['zone'].'_Main_Pic';
+                    $output.='<div id="'.$menuItems[$i][3][6]['zone'].'_MAIN_PIC" onclick="showInnEdit(this.id)">';
+                    $output.=$menuItems[$i][3][6]['zone'].'_MAIN_PIC';
                     $output.='</div>';
-                    $output.='<div id="btm_lft'.$menuItems[$i][3][7]['zone'].'">';
-                    $output.=$menuItems[$i][3][7]['zone'].'_btm_lft';
+                    $output.='<div id="'.$menuItems[$i][3][7]['zone'].'_BTM_LFT" onclick="showInnEdit(this.id)">';
+                    $output.=$menuItems[$i][3][7]['zone'].'_BTM_LFT';
                     $output.='</div>';
-                    $output.='<div id="btm_rght'.$menuItems[$i][3][8]['zone'].'">';
-                    $output.=$menuItems[$i][3][8]['zone'].'_btm_rght';
-                    $output.='</div>'; 
+                    $output.='<div id="'.$menuItems[$i][3][8]['zone'].'_BTM_RGHT" onclick="showInnEdit(this.id)">';
+                    $output.=$menuItems[$i][3][8]['zone'].'_BTM_RGHT';
+                    $output.='</div>';
+                    $output.='<div id="'.$menuItems[$i][3][9]['zone'].'_TITLE" onclick="showInnEdit(this.id)">';
+                    $output.=$menuItems[$i][3][9]['zone'].'_TITLE';
+                    $output.='</div>';
+                    $output.='<div id="'.$menuItems[$i][3][10]['zone'].'_DESC" onclick="showInnEdit(this.id)">';
+                    $output.=$menuItems[$i][3][10]['zone'].'_DESC';
+                    $output.='</div>';
                $output.="</div>";
            }
        }
