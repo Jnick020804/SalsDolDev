@@ -17,10 +17,11 @@ $info = $disp->getAdZoneInfo($zoneID);
         <title>Edit Zone</title>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script src="scripts/featherlight.min.js"></script>
+        <script src="scripts/dashboard.js"></script>
         <link rel="stylesheet" href='scripts/featherlight.min.css' type='text/css'/>
          <link rel='stylesheet' href='css/editZone.css' type='text/css'/>
     </head>
-    <body style="height:400px">
+    <body style="height:350px">
         <div id="contentBox">
             <form method="post" action="changeZone.php"> 
                 <input type="hidden" name="zoneID" value="<?php echo $zoneID;?>"
@@ -72,30 +73,17 @@ $info = $disp->getAdZoneInfo($zoneID);
                             </div>
                         </div>
                     </div>
-                </div>
                 <div id="confirmPortion">
                     <div id="buttonHolder">
                         <div id="confirmButtonDiv">
                             <input type="submit" name="submit" id="submit" value="Confirm">
                         </div>
-                        <div id="cancelButton">
+                        <div id="cancelButton" onclick="window.close();">
                             <span>Cancel</span>
                         </div>
                     </div>
                 </div>
             </form>     
         </div>
-        <script>
-            function setNewPicture(id)
-            {
-                src = document.getElementById(id).getAttribute('src');
-                
-                document.getElementById('advertImage').setAttribute('src',src);
-                document.getElementById('imgSrc').setAttribute('value',src);
-
-                
-                alert('IMAGE CHANGED' + document.getElementById('imgSrc').getAttribute('value'));
-            }
-        </script>
     </body>
 </html>

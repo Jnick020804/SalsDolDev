@@ -98,7 +98,7 @@ and open the template in the editor.
                                 <?php echo $info['side_top_ad']['description']?>
                             </div>
                             <div id="topSideAdImg">
-                                <img src="<?php echo $info['side_top_ad']['img_Src']?>">
+                                <img src="<?php echo $info['side_top_ad']['imgSrc']?>">
                             </div>
                             <div id="topSideAdLink">
                                 <a href="<?php echo $info['side_top_ad']['link_Target']?>">
@@ -134,7 +134,7 @@ and open the template in the editor.
                     <div id="bottomTopDiv">
                         <div id="slot1AdHolder">
                             <div class="slotImg">
-                               <img src="<?php echo $info['slotOne']['img_Src']?>">
+                               <img src="<?php echo $info['slotOne']['imgSrc']?>">
                             </div>
                             <div class="slotLink">
                                 <a href="<?php echo $info['slotOne']['link_Target']?>">
@@ -144,7 +144,7 @@ and open the template in the editor.
                         </div>
                         <div id="slot2AdHolder">
                             <div class="slotImg">
-                               <img src="<?php echo $info['slotTwo']['img_Src']?>">
+                               <img src="<?php echo $info['slotTwo']['imgSrc']?>">
                             </div>
                             <div class="slotLink">
                                 <a href="<?php echo $info['slotTwo']['link_Target']?>">
@@ -154,7 +154,7 @@ and open the template in the editor.
                         </div>
                         <div id="slot3AdHolder">
                             <div class="slotImg">
-                               <img src="<?php echo $info['slotThree']['img_Src']?>">
+                               <img src="<?php echo $info['slotThree']['imgSrc']?>">
                             </div>
                             <div class="slotLink">
                                 <a href="<?php echo $info['slotThree']['link_Target']?>">
@@ -164,7 +164,7 @@ and open the template in the editor.
                         </div>
                         <div id="slot4AdHolder">
                             <div class="slotImg">
-                               <img src="<?php echo $info['slotFour']['img_Src']?>">
+                               <img src="<?php echo $info['slotFour']['imgSrc']?>">
                             </div>
                             <div class="slotLink">
                                 <a href="<?php echo $info['slotFour']['link_Target']?>">

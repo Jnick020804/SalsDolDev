@@ -259,6 +259,10 @@ class Display {
        $db = new Database('Sals_Dollar','localhost','root','root','mysql');
        
        $sql='SELECT * FROM ZONES WHERE ZONES.Zone_ID =:zoneID';
+       if(strpos($zoneID,'_AD')!==FALSE)
+       {
+           $sql='SELECT * FROM Inner_Page_Ad where Inner_Page_Ad.ad_Name =:zoneID';
+       }        
        $result = $db->queryDb($sql,$zoneID,':zoneID');
        
        if(is_string($result))

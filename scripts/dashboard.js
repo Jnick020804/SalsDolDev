@@ -161,10 +161,18 @@ function showInnEdit(id)
     }
     else
     {
-        switch(id)
-        {
-
-        }
+        window.open('zoneEditWindow.php?id='+id,'','width=500,height=500');
     }
     
+}
+
+function setNewPicture(id)
+{
+    src = document.getElementById(id).getAttribute('src');
+
+    document.getElementById('advertImage').setAttribute('src',src);
+    document.getElementById('imgSrc').setAttribute('value',src);
+
+
+    alert('IMAGE CHANGED' + document.getElementById('imgSrc').getAttribute('value'));
 }
