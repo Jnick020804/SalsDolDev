@@ -22,11 +22,6 @@ $(document).ready(function() {
         
     </head>
     <body>
-        <div id='topAdZone'>
-            <div class="imgWrapper">
-                <img alt="topAd" src=/>
-            </div>
-        </div>
         <div id='headerZone'>
             <div id='bannerZone'>
                 <div class="imgWrapper">

@@ -19,11 +19,6 @@ and open the template in the editor.
         <link rel='stylesheet' href='css/inner.css' type='text/css'/>
     </head>
     <body>
-        <div id='topAdZone'>
-            <div class="imgWrapper">
-                <img alt="topAd" src=/>
-            </div>
-        </div>
         <div id='headerZone'>
             <div id='bannerZone'>
                 <div class="imgWrapper">
