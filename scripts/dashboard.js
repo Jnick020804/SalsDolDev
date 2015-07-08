@@ -152,10 +152,10 @@ function showInnEdit(id)
                 window.open('pictureEditBox.php?id='+page+'&zone='+tail,'','width=500,height=500');
                 break;
             case'TITLE':
-                //text edit box
+                window.open('textEditBox.php?id='+page+'&zone='+tail,'','width=500,height=500');
                 break;
             case'DESC':
-                //description edit box
+                window.open('textEditBox.php?id='+page+'&zone='+tail,'','width=800,height=500');
                 break;
         }
     }
